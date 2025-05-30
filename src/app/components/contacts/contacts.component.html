@@ -1,1 +1,13 @@
-<p>contacts works!</p>
+<div class="contacts-wrap">
+  <div class="contacts-text">
+    <div class="headline">
+        <span class="main-text">КОНТАКТИ</span>
+    </div>
+    <div *ngFor="let contact of contactList">
+        <app-contact-info [address]="contact.address" [phoneNumber]="contact.phoneNumber"></app-contact-info>
+    </div>
+  </div>
+  <div class="contacts-map">
+    <img mat-image src="https://media1.tenor.com/m/4f40v0du6PIAAAAC/weed-shades-on.gif"/>
+  </div>
+</div>

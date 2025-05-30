@@ -1,0 +1,29 @@
+.contacts-wrap {
+    display: flex;
+}
+
+.contacts-text {
+    width: 60%;
+    border: 3px solid black;
+}
+
+.contacts-map {
+    display: flex;
+    justify-content: center;
+
+    img {
+        height: 400px;
+        overflow: hidden;
+    }
+}
+
+
+.main-text {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 100px;
+  margin: 10px 0 20px 0;
+  color: #93c756;
+  font-weight: 100;
+  letter-spacing: 2px;
+  line-height: 1;
+}
