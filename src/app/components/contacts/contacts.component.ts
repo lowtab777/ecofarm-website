@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ContactInfoComponent } from '../contact-info/contact-info.component';
 import { CommonModule } from '@angular/common';
 import { ContactInterface } from '../../interfaces/contact-interface';
@@ -11,10 +11,20 @@ import { MapComponent } from '../map/map.component';
   styleUrl: './contacts.component.scss',
 })
 export class ContactsComponent implements OnInit {
+  @ViewChild('mapRef') mapRef!: ElementRef;
+
   selectedAddressId!: number;
 
   ngOnInit(): void {
     this.selectedAddressId = this.contactList[0].id;
+  }
+
+  scrollToMap(): void {
+    console.log('non exis')
+    if(this.mapRef){
+      console.log('ref')
+      this.mapRef.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
   }
 
   contactList: ContactInterface[] = [

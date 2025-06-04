@@ -13,6 +13,13 @@
   // border: 3px solid brown;
 }
 
+@media (max-width: 600px) {
+  .main-page-text{
+    width: 90% !important;
+    padding-left: 0px !important;
+  }
+}
+
 .main-page-img {
     // border: 3px solid rgb(134, 40, 40);
     width: 40%;

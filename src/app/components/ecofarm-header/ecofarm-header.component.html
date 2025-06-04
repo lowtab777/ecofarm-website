@@ -1,52 +1,78 @@
 <div class="toolbar-wrap">
-  <mat-toolbar color="primary">
-    <img
-      src="images/ecofarmLogo.png"
-      routerLink="/"
-      routerLinkActive="active-link"
-      [routerLinkActiveOptions]="{ exact: true }"
-      #rlaMain="routerLinkActive"
-      alt="Logo"
-      class="logo"
-    />
-    <a
-      mat-button
-      routerLink="/"
-      routerLinkActive="active-link"
-      [routerLinkActiveOptions]="{ exact: true }"
-      #rlaMain="routerLinkActive"
-      class="header-link"
-      >МЕДИЧНИЙ КАНАБІС
-      <mat-icon *ngIf="rlaMain.isActive">arrow_drop_down</mat-icon>
-    </a>
-    <a
-      mat-button
-      routerLink="/about-us"
-      routerLinkActive="active-link"
-      #rlaAboutUs="routerLinkActive"
-      class="header-link"
-      >ПРО НАС
-      <mat-icon *ngIf="rlaAboutUs.isActive">arrow_drop_down</mat-icon>
-    </a>
+  <mat-toolbar class="toolbar" color="primary">
+    <nav class="nav-menu hide-on-mobile">
+      <img
+        src="images/ecofarmLogo.png"
+        routerLink="/"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        #rlaMain="routerLinkActive"
+        alt="Logo"
+        class="show-always logo"
+      />
+      <a
+        mat-button
+        routerLink="/"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        #rlaMain="routerLinkActive"
+        class="header-link"
+        >МЕДИЧНИЙ КАНАБІС
+        <mat-icon *ngIf="rlaMain.isActive">arrow_drop_down</mat-icon>
+      </a>
+      <a
+        mat-button
+        routerLink="/about-us"
+        routerLinkActive="active-link"
+        #rlaAboutUs="routerLinkActive"
+        class="header-link"
+        >ПРО НАС
+        <mat-icon *ngIf="rlaAboutUs.isActive">arrow_drop_down</mat-icon>
+      </a>
 
-    <a
-      mat-button
-      routerLink="/news"
-      routerLinkActive="active-link"
-      #rlaNews="routerLinkActive"
-      class="header-link"
-      >НОВИНИ
-      <mat-icon *ngIf="rlaNews.isActive">arrow_drop_down</mat-icon>
-    </a>
+      <a
+        mat-button
+        routerLink="/news"
+        routerLinkActive="active-link"
+        #rlaNews="routerLinkActive"
+        class="header-link"
+        >НОВИНИ
+        <mat-icon *ngIf="rlaNews.isActive">arrow_drop_down</mat-icon>
+      </a>
 
-    <a
-      mat-button
-      routerLink="/contacts"
-      routerLinkActive="active-link"
-      #rlaContacts="routerLinkActive"
-      class="header-link"
-      >КОНТАКТИ
-      <mat-icon *ngIf="rlaContacts.isActive">arrow_drop_down</mat-icon>
-    </a>
+      <a
+        mat-button
+        routerLink="/contacts"
+        routerLinkActive="active-link"
+        #rlaContacts="routerLinkActive"
+        class="header-link"
+        >КОНТАКТИ
+        <mat-icon *ngIf="rlaContacts.isActive">arrow_drop_down</mat-icon>
+      </a>
+    </nav>
+
+    <button
+      mat-icon-button
+      class="burger-menu show-on-mobile"
+      (click)="mobileMenuOpened = !mobileMenuOpened"
+      aria-label="Меню"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
   </mat-toolbar>
+
+  <mat-nav-list *ngIf="mobileMenuOpened" class="mobile-nav show-on-mobile">
+    <a mat-list-item routerLink="/" (click)="mobileMenuOpened = false"
+      >Головна</a
+    >
+    <a mat-list-item routerLink="/about-us" (click)="mobileMenuOpened = false"
+      >Про нас</a
+    >
+    <a mat-list-item routerLink="/news" (click)="mobileMenuOpened = false"
+      >Новини</a
+    >
+    <a mat-list-item routerLink="/contacts" (click)="mobileMenuOpened = false"
+      >Контакти</a
+    >
+  </mat-nav-list>
 </div>
