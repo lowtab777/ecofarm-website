@@ -17,6 +17,7 @@ mat-card {
     object-fit: cover;
     max-height: 300px;
     max-width: 250px;
+    overflow: hidden;
   }
 }
 
@@ -27,7 +28,7 @@ mat-card {
 }
 
 mat-card-content {
-  padding: 0 40px;
+ padding: 0 40px;
 }
 
 mat-card-content p {

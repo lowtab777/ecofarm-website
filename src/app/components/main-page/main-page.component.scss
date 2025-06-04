@@ -18,6 +18,12 @@
     color: white;
   }
 }
+@media (max-width: 600px) {
+  .main-page-text{
+    width: 90%;
+  }
+}
+
 
 .headline {
   margin-top: 2rem;
