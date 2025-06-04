@@ -1,0 +1,15 @@
+.map-wrap {
+    display: flex;
+    width: 800px;
+    height: 600px;
+    justify-content: center;
+}
+
+.map-iframe {
+  width: 800px;
+  height: 600px;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  display: block;
+}
