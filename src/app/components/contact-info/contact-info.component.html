@@ -1,7 +1,10 @@
 <div class="contact-info-wrap">
   <div class="name"></div>
   <p><mat-icon>place</mat-icon>{{ name }}</p>
-  <p>{{ address }}</p>
+  <p>{{ contact.address }}</p>
   <p><mat-icon>phone_in_talk</mat-icon>Телефон</p>
-  <p>{{ phoneNumber }}</p>
+  <p>{{ contact.phoneNumber }}</p>
+  <button mat-button (click)="selectAddressId(contact.id)">
+    Навігація
+  </button>
 </div>

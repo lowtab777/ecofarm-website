@@ -1,27 +1,29 @@
 .contacts-wrap {
     display: flex;
+    margin-top: 30px;
 }
 
 .contacts-text {
-    width: 60%;
-    border: 3px solid black;
+    width: 50%;
+    // border: 3px solid black;
 }
 
 .contacts-map {
+    padding-top: 40px;
+    padding-right: 40px;
+    width: 50%;
     display: flex;
     justify-content: center;
-
-    img {
-        height: 400px;
-        overflow: hidden;
-    }
+    position:fixed;
+    right: 0;
+    // align-items: center;
 }
 
 
 .main-text {
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 100px;
-  margin: 10px 0 20px 0;
+  //margin: 10px 0 20px 0;
   color: #93c756;
   font-weight: 100;
   letter-spacing: 2px;

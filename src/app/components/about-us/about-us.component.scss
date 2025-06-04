@@ -1,18 +1,20 @@
 .main-page-wrap {
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .main-page-text {
   display: flex;
   width: 60%;
   flex-direction: column;
+  padding-left: 40px;
   //justify-content: center;
-  border: 3px solid brown;
+  // border: 3px solid brown;
 }
 
 .main-page-img {
-    border: 3px solid rgb(134, 40, 40);
+    // border: 3px solid rgb(134, 40, 40);
     width: 40%;
     display: flex;
     justify-content: center;
@@ -27,7 +29,7 @@ p {
     font-family: 'Montserrat', Arial, sans-serif;
     color:#646363;
     margin-top: 24px;
-    margin-bottom: 24px;
+    //margin-bottom: 24px;
 }
 
 li {
