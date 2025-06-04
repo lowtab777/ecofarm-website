@@ -1,6 +1,6 @@
 
 export default {
-  basePath: 'lowtab777.github.io/ecofarm-website',
+  basePath: 'https://lowtab777.github.io/ecofarm-website',
   supportedLocales: {
   "en-US": ""
 },
