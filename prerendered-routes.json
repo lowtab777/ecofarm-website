@@ -1,0 +1,8 @@
+{
+  "routes": {
+    "/ecofarm-website/about-us": {},
+    "/ecofarm-website/contacts": {},
+    "/ecofarm-website/main-page": {},
+    "/ecofarm-website/news": {}
+  }
+}
