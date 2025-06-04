@@ -14,6 +14,7 @@ export class ContactInfoComponent implements OnInit {
   @Input() name: string = 'Адреса';
   @Input() contact!: ContactInterface;
   @Output() addressSelected = new EventEmitter<number>();
+  @Output() scrollToMap = new EventEmitter<void>();
 
   constructor() {}
 
@@ -22,8 +23,8 @@ export class ContactInfoComponent implements OnInit {
   }
 
   selectAddressId(id: number){
-    console.log('emited id: ', id);
     this.addressSelected.emit(id);
+    this.scrollToMap.emit();
   }
 
 }
