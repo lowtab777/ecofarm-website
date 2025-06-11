@@ -9,8 +9,6 @@
   width: 60%;
   flex-direction: column;
   padding-left: 40px;
-  //justify-content: center;
-  // border: 3px solid brown;
 }
 
 @media (max-width: 600px) {
@@ -35,16 +33,11 @@
 p {
     font-family: 'Montserrat', Arial, sans-serif;
     color:#646363;
-    margin-top: 24px;
-    //margin-bottom: 24px;
+    margin: 10px 0px 10px 0px;
 }
 
-li {
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-    font-family: 'Montserrat', Arial, sans-serif;
-    color:#646363;
+h2 {
+  margin: 20px 0px 0px 0px;
 }
 
 .headline {
@@ -67,6 +60,6 @@ li {
   font-size: 80px;
   color: #93c756;
   font-weight: 100;
-  letter-spacing: 8px;
+  letter-spacing: 5px;
   line-height: 1;
 }
