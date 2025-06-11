@@ -1,32 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 .ecofarm-light-theme {
   /* Primary (green) */
-  --md-sys-color-primary: #1d8348;        /* основной зеленый */
+  --md-sys-color-primary: #1d8348; /* основной зеленый */
   --md-sys-color-primary-container: #b9f6ca; /* светлый зеленый */
 
   /* Accent (teal) */
-  --md-sys-color-secondary: #009688;       /* основной бирюзовый */
+  --md-sys-color-secondary: #009688; /* основной бирюзовый */
   --md-sys-color-secondary-container: #a7ffeb; /* светлый бирюзовый */
 
   /* Warn (red) */
-  --md-sys-color-error: #d32f2f;           /* красный */
+  --md-sys-color-error: #d32f2f; /* красный */
   --md-sys-color-error-container: #ffcdd2; /* светлый красный */
 
   /* Можно добавить и другие переменные, если хочешь детально настроить цвета */
-  --md-sys-color-background: #f7fff9;      /* фон */
-  --md-sys-color-surface: #ffffff;         /* поверхности */
-  --md-sys-color-on-primary: #fff;         /* текст на зеленом */
-  --md-sys-color-on-secondary: #fff;       /* текст на бирюзовом */
-  --md-sys-color-on-error: #fff;           /* текст на красном */
-  --md-sys-color-on-background: #232323;   /* текст на фоне */
-  --md-sys-color-on-surface: #232323;      /* текст на поверхности */
+  --md-sys-color-background: #f7fff9; /* фон */
+  --md-sys-color-surface: #ffffff; /* поверхности */
+  --md-sys-color-on-primary: #fff; /* текст на зеленом */
+  --md-sys-color-on-secondary: #fff; /* текст на бирюзовом */
+  --md-sys-color-on-error: #fff; /* текст на красном */
+  --md-sys-color-on-background: #232323; /* текст на фоне */
+  --md-sys-color-on-surface: #232323; /* текст на поверхности */
 }
 
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-nav a, .app-header a, .app-header img {
+nav a,
+.app-header a,
+.app-header img {
   cursor: pointer;
 }
 
@@ -46,4 +53,12 @@ nav a, .app-header a, .app-header img {
 
 .width-100 {
   width: 100%;
+}
+
+p {
+  color: #303030;
+}
+
+li {
+  color: #303030;
 }
