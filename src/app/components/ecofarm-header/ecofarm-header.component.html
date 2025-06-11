@@ -32,12 +32,42 @@
 
       <a
         mat-button
+        routerLink="/products"
+        routerLinkActive="active-link"
+        #rlaProducts="routerLinkActive"
+        class="header-link"
+        >ПРОДУКТИ
+        <mat-icon *ngIf="rlaProducts.isActive">arrow_drop_down</mat-icon>
+      </a>
+
+      <a
+        mat-button
+        routerLink="/team"
+        routerLinkActive="active-link"
+        #rlaTeam="routerLinkActive"
+        class="header-link"
+        >КОМАНДА
+        <mat-icon *ngIf="rlaTeam.isActive">arrow_drop_down</mat-icon>
+      </a>
+
+      <a
+        mat-button
         routerLink="/news"
         routerLinkActive="active-link"
         #rlaNews="routerLinkActive"
         class="header-link"
         >НОВИНИ
         <mat-icon *ngIf="rlaNews.isActive">arrow_drop_down</mat-icon>
+      </a>
+
+      <a
+        mat-button
+        routerLink="/licenses"
+        routerLinkActive="active-link"
+        #rlaLicenses="routerLinkActive"
+        class="header-link"
+        >ЛІЦЕНЗІЇ
+        <mat-icon *ngIf="rlaLicenses.isActive">arrow_drop_down</mat-icon>
       </a>
 
       <a
