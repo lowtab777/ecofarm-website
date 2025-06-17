@@ -1,0 +1,27 @@
+.team-wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.headline {
+    display: flex;
+    align-items: center;
+}
+
+p{
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.team-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 2vh;
+}
+
+app-team-member-card {
+    width: 30%;
+}
