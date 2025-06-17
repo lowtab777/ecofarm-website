@@ -1,7 +1,27 @@
 .main-page-wrap {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.slogan {
+  margin: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+
+
+  text-align: center;
+}
+
+.slogan h2{
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
 }
 
 .main-page-text {
