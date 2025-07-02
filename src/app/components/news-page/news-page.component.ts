@@ -8,5 +8,5 @@ import { NewsCardComponent } from "../news-card/news-card.component";
   styleUrl: './news-page.component.scss'
 })
 export class NewsPageComponent {
-
+  tempText: string = `У рамках національної стратегії розширення мережі ТОВ "ФК "Екофарм" ми відкриваємо ліцензовані виробничі аптеки`;
 }
