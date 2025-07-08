@@ -1,25 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 .ecofarm-light-theme {
   /* Primary (green) */
-  --md-sys-color-primary: #1d8348; /* основной зеленый */
-  --md-sys-color-primary-container: #b9f6ca; /* светлый зеленый */
+  --md-sys-color-primary: #1d8348;
+  --md-sys-color-primary-container: #b9f6ca; 
 
   /* Accent (teal) */
-  --md-sys-color-secondary: #009688; /* основной бирюзовый */
-  --md-sys-color-secondary-container: #a7ffeb; /* светлый бирюзовый */
+  --md-sys-color-secondary: #009688;
+  --md-sys-color-secondary-container: #a7ffeb;
 
   /* Warn (red) */
-  --md-sys-color-error: #d32f2f; /* красный */
-  --md-sys-color-error-container: #ffcdd2; /* светлый красный */
+  --md-sys-color-error: #d32f2f;
+  --md-sys-color-error-container: #ffcdd2; 
 
-  /* Можно добавить и другие переменные, если хочешь детально настроить цвета */
-  --md-sys-color-background: #f7fff9; /* фон */
-  --md-sys-color-surface: #ffffff; /* поверхности */
-  --md-sys-color-on-primary: #fff; /* текст на зеленом */
-  --md-sys-color-on-secondary: #fff; /* текст на бирюзовом */
-  --md-sys-color-on-error: #fff; /* текст на красном */
-  --md-sys-color-on-background: #232323; /* текст на фоне */
-  --md-sys-color-on-surface: #232323; /* текст на поверхности */
+  --md-sys-color-background: #f7fff9;
+  --md-sys-color-surface: #ffffff;
+  --md-sys-color-on-primary: #fff;
+  --md-sys-color-on-secondary: #fff;
+  --md-sys-color-on-error: #fff;
+  --md-sys-color-on-background: #232323;
+  --md-sys-color-on-surface: #232323; 
 }
 
 html,
@@ -74,7 +73,19 @@ li {
   color: #303030;
 }
 
+h1 {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: #202020;
+  //font-weight: 500;
+}
+
 h2 {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: #202020;
+  font-weight: 600;
+}
+
+h3 {
   font-family: "Montserrat", Arial, sans-serif;
   color: #202020;
   font-weight: 500;
