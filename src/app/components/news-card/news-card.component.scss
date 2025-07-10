@@ -10,7 +10,7 @@ mat-card {
   flex-direction: row;
   justify-content: center;
   border-radius: 20px;
-  background-color: #93c756;
+  border: 5px solid #93c756;
   height: 100%;
   width: 100%;
 
@@ -27,13 +27,13 @@ mat-card {
 .title {
   display: flex;
   justify-content: center;
-  color: white;
+  color: rgb(0, 0, 0);
   flex: 1;
 }
 
 .content p {
     font-family: 'Montserrat', Arial, sans-serif;
-    color:#e7e7e7;
+    color:#000000;
     text-align: justify;
     margin-top: 24px;
     margin-bottom: 24px;
