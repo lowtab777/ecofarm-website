@@ -11,7 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './news-card.component.scss'
 })
 export class NewsCardComponent {
-  @Input() title = '';
+  @Input() title = 'test';
   @Input() description = `Sunlight filtered through the forest canopy, creating a dynamic
         interplay of light and shadow that influences local microclimates. This
         dappled illumination affects photosynthetic activity and regulates
