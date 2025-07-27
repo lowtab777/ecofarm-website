@@ -1,19 +1,21 @@
 <div class="contacts-wrap">
-  <div class="contacts-text">
-    <div class="headline">
-      <span class="main-text">КОНТАКТИ</span>
-    </div>
-    <div class="contacts-list" *ngFor="let contact of contactList">
-      <app-contact-info
-        [contact]="contact"
-        (addressSelected)="handleAddressChange($event)"
-        (scrollToMap)="scrollToMap()"
-      ></app-contact-info>
-    </div>
+  <div class="headline">
+    <span class="main-text">КОНТАКТИ</span>
   </div>
-  <div class="contacts-map" #mapRef>
-    <app-map
-      [mapSource]="contactList[selectedAddressId - 1].mapSource"
-    ></app-map>
+  <div class="content">
+    <div class="contacts-list">
+      <div class="contact" *ngFor="let contact of contactList">
+        <app-contact-info
+          [contact]="contact"
+          (addressSelected)="handleAddressChange($event)"
+          (scrollToMap)="scrollToMap()"
+        ></app-contact-info>
+      </div>
+    </div>
+    <div class="contacts-map" #mapRef>
+      <app-map
+        [mapSource]="contactList[selectedAddressId - 1].mapSource"
+      ></app-map>
+    </div>
   </div>
 </div>
