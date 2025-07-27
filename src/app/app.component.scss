@@ -31,11 +31,21 @@
   z-index: 100;
 }
 
+@media (min-width: 600px) and (max-width: 1400px) {
+    .app-header {
+    height: 60px;
+  }
+}
+
 @media (max-width: 600px) {
   .app-header,
   .app-content {
-    padding-left: 8px !important;
-    padding-right: 8px !important;
+    padding: 0 8px !important;
+  }
+
+  .app-header {
+      background: #b14e4e;
+    height: 40px;
   }
 
   .app-footer {

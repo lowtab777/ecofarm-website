@@ -10,17 +10,7 @@ news-card {
 
 }
 
-@media (max-width: 600px){
-  .width-mobile-80 {
-    width: 80% !important;
-  }
-  .news-list {
-    align-items: center !important;
-    flex-direction: column !important;
-    gap: 0px;
-  }
 
-}
 
 .news-wrap p {
   font-family: "Montserrat", Arial, sans-serif;
@@ -40,8 +30,27 @@ news-card {
 
 .news-card {
   text-align: center;
-  width: 400px;
+  width: 370px;
   height: 700px;
 }
 
 
+@media (min-width: 600px) and (max-width: 1400px){
+  .news-list {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 600px){
+  .width-mobile-80 {
+    width: 80% !important;
+  }
+  .news-list {
+    align-items: center !important;
+    flex-direction: column !important;
+    gap: 0px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}

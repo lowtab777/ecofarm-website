@@ -8,11 +8,12 @@
   border-bottom: 2px solid #93c756;
   width: 100%;
   background: #fff;
+  height: 63.5px;
 }
 
 .mat-toolbar a.active-link {
   height: 100px;
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid black; 
 }
 
 .logo {
@@ -38,6 +39,7 @@ mat-icon a.active-link {
 .header-link {
   display: flex;
   flex-direction: column-reverse;
+  word-break: break-all;
 }
 
 a{
@@ -77,14 +79,40 @@ a{
     display: flex;
     justify-content: space-between !important;
     align-items: end !important;
+    height: 20px;
+      margin-top: 3rem;
   }
   .mobile-nav {
     position: absolute;
-    top: 70px;
+    top: 50px;
     left: 0;
     width: 100vw;
-    background: white;
+    height: 20px;
     z-index: 100;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-menu {
+      padding-bottom: 0rem;
+  }
+
+
+}
+
+@media (min-width: 600px) and (max-width: 1400px) {
+  .logo  {
+    display: none;
+  }
+
+  .nav-menu {
+    height: 60px;
+  }
+
+  .mat-toolbar a.active-link{
+    height: 76.5px;
+  }
+
+  .toolbar {
+    height: 40px;
   }
 }
