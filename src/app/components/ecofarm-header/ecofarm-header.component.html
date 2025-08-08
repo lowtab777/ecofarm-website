@@ -1,108 +1,101 @@
-<div class="toolbar-wrap">
-  <mat-toolbar class="toolbar" color="primary">
-    <nav class="nav-menu hide-on-mobile">
-      <img
-        src="images/ecofarmLogo.png"
-        routerLink="/"
-        routerLinkActive="active-link"
-        [routerLinkActiveOptions]="{ exact: true }"
-        #rlaMain="routerLinkActive"
-        alt="Logo"
-        class="show-always logo"
-      />
-      <a
-        mat-button
-        routerLink="/"
-        routerLinkActive="active-link"
-        [routerLinkActiveOptions]="{ exact: true }"
-        #rlaMain="routerLinkActive"
-        class="header-link"
-        >МЕДИЧНИЙ КАНАБІС
-        <mat-icon *ngIf="rlaMain.isActive">arrow_drop_down</mat-icon>
-      </a>
-      <a
-        mat-button
-        routerLink="/about-us"
-        routerLinkActive="active-link"
-        #rlaAboutUs="routerLinkActive"
-        class="header-link"
-        >ПРО НАС
-        <mat-icon *ngIf="rlaAboutUs.isActive">arrow_drop_down</mat-icon>
-      </a>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+    <!-- Фиксированный тулбар -->
+    <mat-toolbar class="toolbar" color="primary">
+      <nav class="nav-menu hide-on-mobile">
+        <div class="row">
+          <h1 class="xxl logo">ФК</h1>
+          <img
+            src="images/ecofarmLogo.png"
+            routerLink="/"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            #rlaMain="routerLinkActive"
+            alt="Logo"
+            class="show-always logo"
+          />
+        </div>
 
-      <a
-        mat-button
-        routerLink="/products"
-        routerLinkActive="active-link"
-        #rlaProducts="routerLinkActive"
-        class="header-link"
-        >ПРОДУКТИ
-        <mat-icon *ngIf="rlaProducts.isActive">arrow_drop_down</mat-icon>
-      </a>
+        <a
+          mat-button
+          routerLink="/"
+          routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{ exact: true }"
+          #rlaMain="routerLinkActive"
+          class="header-link"
+          >МЕДИЧНИЙ КАНАБІС
+          <mat-icon *ngIf="rlaMain.isActive">arrow_drop_down</mat-icon>
+        </a>
 
-      <a
-        mat-button
-        routerLink="/team"
-        routerLinkActive="active-link"
-        #rlaTeam="routerLinkActive"
-        class="header-link"
-        >КОМАНДА
-        <mat-icon *ngIf="rlaTeam.isActive">arrow_drop_down</mat-icon>
-      </a>
+        <a
+          mat-button
+          routerLink="/about-us"
+          routerLinkActive="active-link"
+          #rlaAboutUs="routerLinkActive"
+          class="header-link"
+          >ПРО НАС
+          <mat-icon *ngIf="rlaAboutUs.isActive">arrow_drop_down</mat-icon>
+        </a>
 
-      <a
-        mat-button
-        routerLink="/news"
-        routerLinkActive="active-link"
-        #rlaNews="routerLinkActive"
-        class="header-link"
-        >НОВИНИ
-        <mat-icon *ngIf="rlaNews.isActive">arrow_drop_down</mat-icon>
-      </a>
+        <a
+          mat-button
+          routerLink="/products"
+          routerLinkActive="active-link"
+          #rlaProducts="routerLinkActive"
+          class="header-link"
+          >ПРОДУКТИ
+          <mat-icon *ngIf="rlaProducts.isActive">arrow_drop_down</mat-icon>
+        </a>
 
-      <a
-        mat-button
-        routerLink="/licenses"
-        routerLinkActive="active-link"
-        #rlaLicenses="routerLinkActive"
-        class="header-link"
-        >ЛІЦЕНЗІЇ
-        <mat-icon *ngIf="rlaLicenses.isActive">arrow_drop_down</mat-icon>
-      </a>
+        <a
+          mat-button
+          routerLink="/team"
+          routerLinkActive="active-link"
+          #rlaTeam="routerLinkActive"
+          class="header-link"
+          >КОМАНДА
+          <mat-icon *ngIf="rlaTeam.isActive">arrow_drop_down</mat-icon>
+        </a>
 
-      <a
-        mat-button
-        routerLink="/contacts"
-        routerLinkActive="active-link"
-        #rlaContacts="routerLinkActive"
-        class="header-link"
-        >КОНТАКТИ
-        <mat-icon *ngIf="rlaContacts.isActive">arrow_drop_down</mat-icon>
-      </a>
-    </nav>
+        <a
+          mat-button
+          routerLink="/news"
+          routerLinkActive="active-link"
+          #rlaNews="routerLinkActive"
+          class="header-link"
+          >НОВИНИ
+          <mat-icon *ngIf="rlaNews.isActive">arrow_drop_down</mat-icon>
+        </a>
 
-    <button
-      mat-icon-button
-      class="burger-menu show-on-mobile"
-      (click)="mobileMenuOpened = !mobileMenuOpened"
-      aria-label="Меню"
-    >
-      <mat-icon>menu</mat-icon>
-    </button>
-  </mat-toolbar>
+        <a
+          mat-button
+          routerLink="/licenses"
+          routerLinkActive="active-link"
+          #rlaLicenses="routerLinkActive"
+          class="header-link"
+          >ЛІЦЕНЗІЇ
+          <mat-icon *ngIf="rlaLicenses.isActive">arrow_drop_down</mat-icon>
+        </a>
 
-  <mat-nav-list *ngIf="mobileMenuOpened" class="mobile-nav show-on-mobile">
-    <a mat-list-item routerLink="/" (click)="mobileMenuOpened = false"
-      >Головна</a
-    >
-    <a mat-list-item routerLink="/about-us" (click)="mobileMenuOpened = false"
-      >Про нас</a
-    >
-    <a mat-list-item routerLink="/news" (click)="mobileMenuOpened = false"
-      >Новини</a
-    >
-    <a mat-list-item routerLink="/contacts" (click)="mobileMenuOpened = false"
-      >Контакти</a
-    >
-  </mat-nav-list>
-</div>
+        <a
+          mat-button
+          routerLink="/contacts"
+          routerLinkActive="active-link"
+          #rlaContacts="routerLinkActive"
+          class="header-link"
+          >КОНТАКТИ
+          <mat-icon *ngIf="rlaContacts.isActive">arrow_drop_down</mat-icon>
+        </a>
+      </nav>
+
+      <button
+        mat-icon-button
+        class="burger-menu show-on-mobile"
+        (click)="onMenuClick()"
+        aria-label="Меню"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
