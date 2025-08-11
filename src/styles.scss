@@ -2,7 +2,7 @@
 .ecofarm-light-theme {
   /* Primary (green) */
   --md-sys-color-primary: #1d8348;
-  --md-sys-color-primary-container: #b9f6ca; 
+  --md-sys-color-primary-container: #b9f6ca;
 
   /* Accent (teal) */
   --md-sys-color-secondary: #009688;
@@ -10,7 +10,7 @@
 
   /* Warn (red) */
   --md-sys-color-error: #d32f2f;
-  --md-sys-color-error-container: #ffcdd2; 
+  --md-sys-color-error-container: #ffcdd2;
 
   --md-sys-color-background: #f7fff9;
   --md-sys-color-surface: #ffffff;
@@ -18,12 +18,14 @@
   --md-sys-color-on-secondary: #fff;
   --md-sys-color-on-error: #fff;
   --md-sys-color-on-background: #232323;
-  --md-sys-color-on-surface: #232323; 
+  --md-sys-color-on-surface: #232323;
 }
 
 html,
 body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 body {
   margin: 0;
@@ -147,4 +149,3 @@ button.btn-primary {
   background-color: #efffdd;
   padding: 20px;
 }
-
