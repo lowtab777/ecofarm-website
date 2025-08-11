@@ -1,31 +1,79 @@
 .team-wrap {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.headline {
-    display: flex;
-    align-items: center;
-}
-
-p{
-    font-size: 24px;
-    font-weight: 300;
-}
-
-.team-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    margin-top: 2vh;
-}
-
-app-team-member-card {
-    width: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* чуть воздуха вокруг */
+  padding: 20px 16px;
 }
 
 .content {
-    max-width: 1400px;
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* расстояние между блоками */
+}
+
+/* заголовок оставляем как у тебя */
+.headline {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* базовая типографика */
+p {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.6; /* добавим межстрочный для читаемости */
+}
+
+/* список карточек сотрудников — как было */
+.team-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2vh;
+}
+
+app-team-member-card {
+  width: 30%;
+}
+
+/* ===== новое: секции с чередованием фона ===== */
+
+/* сами секции */
+.content > .team-section {
+  border-radius: 16px;
+  padding: 24px;
+}
+
+/* белые секции — без тени */
+.content > .team-section:nth-of-type(odd) {
+  background: #fff;
+  box-shadow: none;
+}
+
+/* зелёные секции — с тенью */
+.content > .team-section:nth-of-type(even) {
+  background: #f3faec; /* очень светлый зелёный под твой стиль */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+/* типографика внутри секций (если нужно точечно) */
+.content > .team-section p {
+  margin: 0;            /* абзацы уже разделены секциями */
+  text-align: justify;  /* как на main */
+}
+
+/* адаптив: чутка уменьшаем отступы на мобилке */
+@media (max-width: 600px) {
+  .content > .team-section {
+    padding: 16px;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.55;
+  }
 }
