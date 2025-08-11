@@ -6,6 +6,7 @@
     <div class="contacts-list">
       <div class="contact" *ngFor="let contact of contactList">
         <app-contact-info
+          class="contact-info-item"
           [contact]="contact"
           (addressSelected)="handleAddressChange($event)"
           (scrollToMap)="scrollToMap()"

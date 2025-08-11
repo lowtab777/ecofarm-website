@@ -1,4 +1,3 @@
-// src/app/material.ts
 import { importProvidersFrom } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
