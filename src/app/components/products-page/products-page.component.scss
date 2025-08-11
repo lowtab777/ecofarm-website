@@ -1,6 +1,5 @@
 $accent: #93c756;
-$bg-green-weak: #f3faec;
-$bg-green-strong: #e6f4d7;
+$bg-green: #efffdd;
 $text: #1a1a1a;
 
 .product-page-wrap {
@@ -22,7 +21,7 @@ $text: #1a1a1a;
     }
 
     &:nth-child(even) {
-      background: $bg-green-weak;
+      background: $bg-green;
     }
     &:nth-child(odd) {
       background: #fff;
@@ -48,6 +47,11 @@ $text: #1a1a1a;
       margin: 16px 0;
       line-height: 1.7;
       text-align: justify;
+    }
+
+    p:first-child{
+        font-size: 24px;
+        text-align: justify;
     }
 
     ul {
@@ -85,7 +89,6 @@ $text: #1a1a1a;
 
   .green-text { color: $accent; }
   .single-text-block-green {
-    background: $bg-green-weak;
     border-radius: 12px;
     padding: 12px 14px;
   }

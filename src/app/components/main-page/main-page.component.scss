@@ -91,11 +91,10 @@ ul {
   .main-page-text {
     width: 100%;
     margin-right: 0;
-    padding: 0 8px;          /* уже поля */
+    padding: 0 8px;
     min-width: 0;
   }
 
-  /* картинку не фиксируем, убираем sticky */
   .main-page-img {
     order: 2;
     width: 100%;
@@ -110,7 +109,6 @@ ul {
     }
   }
 
-  /* заголовок в колонку + маленькие, но читабельные кегли */
   .headline {
     flex-direction: column;
     align-items: flex-start;
@@ -121,7 +119,6 @@ ul {
   .headline .main-text  { font-size: clamp(16px, 6.2vw, 28px); }
   .headline .accent-text{ font-size: clamp(20px, 9.8vw, 36px); }
 
-  /* чтобы ничего не выезжало по ширине */
   .headline span, .main-page-text, .single-text-block-green, .single-text-block-white {
     min-width: 0;
     max-width: 100%;
@@ -130,27 +127,23 @@ ul {
     hyphens: auto;
   }
 
-  /* зелёные/белые блоки компактнее */
   .single-text-block-green,
   .single-text-block-white {
     padding: 8px 10px;
     border-radius: 12px;
   }
 
-  /* типографика */
   p       { font-size: 15px; line-height: 1.55; margin: 10px 0; }
   ul      { padding-left: 1.05em; margin: 6px 0 10px; }
   ul li   { font-size: 15px; line-height: 1.55; margin-bottom: 8px; }
 
-  /* слоган сверху — меньше и без больших полей */
-  .slogan { margin: 0 8px; font-size: 0; } /* обнуляем font-size у контейнера */
+  .slogan { margin: 0 8px; font-size: 0; }
   .slogan h2 {
     font-size: clamp(16px, 5.2vw, 20px);
     line-height: 1.2;
     margin: 10px 0;
   }
 
-  /* кнопка — на всю ширину */
   .btn-primary { width: 100%; min-height: 44px; font-size: 15px; margin-top: 10px; }
 }
 
@@ -170,7 +163,6 @@ ul {
     padding: 0 10px; 
   }
 
-  /* картинка под текстом, без sticky */
   .main-page-img {
     order: 2;
     width: 100%;
@@ -188,7 +180,6 @@ ul {
     }
   }
 
-  /* заголовок: в колонку + fluid размеры */
   .headline {
     flex-direction: column;
     align-items: flex-start;
@@ -203,7 +194,6 @@ ul {
     line-height: 1.1;
   }
 
-  /* слоты текста — компактнее */
   .single-text-block-green,
   .single-text-block-white {
     padding: 8px 12px;
@@ -214,7 +204,7 @@ ul {
     font-size: 16px;
     line-height: 1.6;
     margin: 12px 0;
-    word-break: break-word; /* не ломать вёрстку длинными словами */
+    word-break: break-word;
     overflow-wrap: anywhere;
   }
 
@@ -228,7 +218,6 @@ ul {
     }
   }
 
-  /* кнопка — на всю ширину, удобная зона касания */
   .btn-primary {
     width: 100%;
     min-height: 44px;
@@ -236,11 +225,10 @@ ul {
     margin-top: 12px;
   }
 
-  /* слоган тоже «сжимается» красиво */
   .slogan {
     margin: 0 10px;
     font-size: clamp(18px, 5vw, 24px);
-    text-align: left; /* или center — как тебе больше нравится */
+    text-align: left;
   }
 }
 
