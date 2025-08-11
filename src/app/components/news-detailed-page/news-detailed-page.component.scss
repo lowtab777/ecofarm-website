@@ -1,0 +1,32 @@
+.news-detailed {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.img-main {
+  display: block;
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 12px 0 20px;
+}
+
+.content {
+  line-height: 1.6;
+  font-size: 16px;
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  ul {
+    padding-left: 1.2em;
+    margin-bottom: 1em;
+
+    li {
+      list-style: disc;
+    }
+  }
+}

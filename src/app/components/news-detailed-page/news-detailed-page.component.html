@@ -1,1 +1,16 @@
-<p>news-detailed-page works!</p>
+<ng-container *ngIf="news as n">
+  <section class="news-detailed">
+    <h1>{{ n.title }}</h1>
+
+    <img
+      *ngIf="n.imageUrl"
+      [src]="n.imageUrl"
+      [alt]="n.title"
+      class="img-main"
+    />
+
+    <div class="content" [innerHTML]="news.content"></div>
+
+    <button [routerLink]="'/news'" class="btn-primary">Назад</button>
+  </section>
+</ng-container>

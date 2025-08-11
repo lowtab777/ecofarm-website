@@ -6,14 +6,17 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { TeamPageComponent } from './components/team-page/team-page.component';
 import { LicensesPageComponent } from './components/licenses-page/licenses-page.component';
 import { ProductsPageComponent } from './components/products-page/products-page.component';
+import { NewsDetailedPageComponent } from './components/news-detailed-page/news-detailed-page.component';
 
 export const routes: Routes = [
-    {path:'news', component: NewsPageComponent},
-    {path:'contacts', component: ContactsComponent},
-    {path:'about-us', component: AboutUsComponent},
-    {path:'main-page', component: MainPageComponent},
-    {path:'team', component: TeamPageComponent},
-    {path:'licenses', component: LicensesPageComponent},
-    {path:'products', component: ProductsPageComponent},
-    {path:'**', component: MainPageComponent},
+  //{ path: '', redirectTo: '**', pathMatch: 'full' },
+  { path: 'news', component: NewsPageComponent },
+  { path: 'news/:slug', component: NewsDetailedPageComponent },
+  { path: 'contacts', component: ContactsComponent },
+  { path: 'about-us', component: AboutUsComponent },
+  { path: 'main-page', component: MainPageComponent },
+  { path: 'team', component: TeamPageComponent },
+  { path: 'licenses', component: LicensesPageComponent },
+  { path: 'products', component: ProductsPageComponent },
+  { path: '**', component: MainPageComponent },
 ];
