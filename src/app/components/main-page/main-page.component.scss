@@ -25,24 +25,14 @@
   flex-direction: row;
   gap: 20px;
   max-width: 1400px;
+  min-width: 0;
 }
 
 .main-page-text {
   width: 65%;
   text-align: justify;
   margin-right: 30px;
-  // border: 3px solid black;
-
-  // button {
-  //   font-family: "Montserrat", Arial, sans-serif;
-  //   font-size: 20px;
-  //   background-color: #93c756;
-  //   height: 48px;
-  //   min-width: 200px;
-  //   color: white;
-  //   margin-top: 20px;
-  //   font-weight: 700;
-  // }
+  min-width: 0;
 }
 
 .main-page-img {
@@ -64,8 +54,8 @@
   }
 }
 
-.single-text-block-green, 
-.single-text-block-white{
+.single-text-block-green,
+.single-text-block-white {
   padding: 5px 20px;
 }
 
@@ -90,14 +80,172 @@ ul {
 
 
 
+@media (max-width: 359.98px) {
+  .main-content {
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100%;
+    padding-right: 15px;
+  }
 
-@media (max-width: 600px) {
   .main-page-text {
-    width: 90%;
+    width: 100%;
+    margin-right: 0;
+    padding: 0 8px;          /* уже поля */
+    min-width: 0;
+  }
+
+  /* картинку не фиксируем, убираем sticky */
+  .main-page-img {
+    order: 2;
+    width: 100%;
+    position: static;
+    padding: 0 8px 8px;
+    img {
+      position: static;
+      width: 100%;
+      height: auto;
+      max-height: 38vh;
+      object-fit: contain;
+    }
+  }
+
+  /* заголовок в колонку + маленькие, но читабельные кегли */
+  .headline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    line-height: 1.05;
+    width: 100%;
+  }
+  .headline .main-text  { font-size: clamp(16px, 6.2vw, 28px); }
+  .headline .accent-text{ font-size: clamp(20px, 9.8vw, 36px); }
+
+  /* чтобы ничего не выезжало по ширине */
+  .headline span, .main-page-text, .single-text-block-green, .single-text-block-white {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  /* зелёные/белые блоки компактнее */
+  .single-text-block-green,
+  .single-text-block-white {
+    padding: 8px 10px;
+    border-radius: 12px;
+  }
+
+  /* типографика */
+  p       { font-size: 15px; line-height: 1.55; margin: 10px 0; }
+  ul      { padding-left: 1.05em; margin: 6px 0 10px; }
+  ul li   { font-size: 15px; line-height: 1.55; margin-bottom: 8px; }
+
+  /* слоган сверху — меньше и без больших полей */
+  .slogan { margin: 0 8px; font-size: 0; } /* обнуляем font-size у контейнера */
+  .slogan h2 {
+    font-size: clamp(16px, 5.2vw, 20px);
+    line-height: 1.2;
+    margin: 10px 0;
+  }
+
+  /* кнопка — на всю ширину */
+  .btn-primary { width: 100%; min-height: 44px; font-size: 15px; margin-top: 10px; }
+}
+
+
+
+@media (min-width: 360px) and (max-width: 999.98px) {
+  .main-content {
+    flex-direction: column;
+    gap: 12px;
+    max-width: 100%;
+    padding-right: 20px;
+  }
+
+  .main-page-text {
+    width: 100%;
+    margin-right: 0;
+    padding: 0 10px; 
+  }
+
+  /* картинка под текстом, без sticky */
+  .main-page-img {
+    order: 2;
+    width: 100%;
+    position: static;
+    display: flex;
+    justify-content: center;
+    padding: 0 10px 10px;
+
+    img {
+      position: static;
+      max-height: 40vh;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  /* заголовок: в колонку + fluid размеры */
+  .headline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .headline .main-text {
+    font-size: clamp(18px, 6vw, 28px);
+    line-height: 1.1;
+  }
+  .headline .accent-text {
+    font-size: clamp(24px, 10vw, 40px);
+    line-height: 1.1;
+  }
+
+  /* слоты текста — компактнее */
+  .single-text-block-green,
+  .single-text-block-white {
+    padding: 8px 12px;
+    border-radius: 12px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 12px 0;
+    word-break: break-word; /* не ломать вёрстку длинными словами */
+    overflow-wrap: anywhere;
+  }
+
+  ul {
+    padding-left: 1.1em;
+    margin: 6px 0 12px;
+    li {
+      margin-bottom: 8px;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+  }
+
+  /* кнопка — на всю ширину, удобная зона касания */
+  .btn-primary {
+    width: 100%;
+    min-height: 44px;
+    font-size: 16px;
+    margin-top: 12px;
+  }
+
+  /* слоган тоже «сжимается» красиво */
+  .slogan {
+    margin: 0 10px;
+    font-size: clamp(18px, 5vw, 24px);
+    text-align: left; /* или center — как тебе больше нравится */
   }
 }
 
-@media (min-width: 600px) and (max-width: 1400px) {
+
+@media (min-width: 1000px) and (max-width: 1400px) {
   .main-page-img {
     display: none;
     img {

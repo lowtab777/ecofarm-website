@@ -12,7 +12,7 @@ news-card {
 
 
 
-.news-wrap p {
+.header {
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 100px;
   margin: 0px 0 20px 0;
@@ -35,22 +35,27 @@ news-card {
 }
 
 
-@media (min-width: 600px) and (max-width: 1400px){
+@media (min-width: 1000px) and (max-width: 1400px){
   .news-list {
       grid-template-columns: repeat(2, 1fr);
   }
 }
 
 
-@media (max-width: 600px){
+@media (max-width: 1000px){
   .width-mobile-80 {
     width: 80% !important;
   }
   .news-list {
-    align-items: center !important;
-    flex-direction: column !important;
-    gap: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .header {
+    font-size: 60px;
   }
 
 }
