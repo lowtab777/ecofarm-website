@@ -64,17 +64,32 @@
   }
 }
 
+.single-text-block-green, 
+.single-text-block-white{
+  padding: 5px 20px;
+}
+
 p {
-  margin-top: 24px;
-  margin-bottom: 10px;
+  //margin-top: 24px;
+  //margin-bottom: 10px;
+  line-height: 1.7;
 }
 
-li {
-  margin-top: 0px;
+ul {
+  padding-left: 1.2em;
+  margin-top: 0;
   margin-bottom: 10px;
 
-  font-family: "Montserrat", Arial, sans-serif;
+  li {
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.7;
+    font-family: "Montserrat", Arial, sans-serif;
+  }
 }
+
+
+
 
 @media (max-width: 600px) {
   .main-page-text {
