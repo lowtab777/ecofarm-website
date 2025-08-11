@@ -36,6 +36,11 @@ mat-card {
   text-align: left;
   margin: 0px 20px 20px 20px;
   font-size: 24px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .mat-card-content {
@@ -69,7 +74,7 @@ mat-card {
   .news-description {
     font-size: 20px;
     display: -webkit-box;
-    -webkit-line-clamp: 7; /* количество строк */
+    -webkit-line-clamp: 7;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }

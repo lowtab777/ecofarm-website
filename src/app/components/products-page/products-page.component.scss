@@ -51,7 +51,6 @@ $text: #1a1a1a;
 
     p:first-child{
         font-size: 24px;
-        text-align: justify;
     }
 
     ul {
@@ -83,17 +82,13 @@ $text: #1a1a1a;
     }
   }
 
-  .summary {
-    font-size: 24px;
-  }
-
   .green-text { color: $accent; }
   .single-text-block-green {
     border-radius: 12px;
     padding: 12px 14px;
   }
 
-  .btn-primary {
+  .btn-primary { // not used
     font-family: "Montserrat", Arial, sans-serif;
     font-size: 18px;
     background-color: $accent;
@@ -115,5 +110,9 @@ $text: #1a1a1a;
   .product-page-wrap {
     padding: 12px;
     .section { padding: 16px; }
+  }
+
+  .summary p{
+    font-size: clamp(12px, 2vw, 20px);
   }
 }
