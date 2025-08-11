@@ -1,10 +1,10 @@
 <div class="news-wrap">
-  <p>НОВИНИ</p>
+  <p class="header">НОВИНИ</p>
   <div class="news-list">
     <app-news-card
+      *ngFor="let item of newsList"
       class="width-20 width-mobile-80 news-card"
-      title="Активний розвиток"
-      [description]="tempText"
+      [news]="item"
     ></app-news-card>
   </div>
 </div>

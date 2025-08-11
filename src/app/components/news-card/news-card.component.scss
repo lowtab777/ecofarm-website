@@ -30,13 +30,12 @@ mat-card {
   flex: 1;
 }
 
-.mat-card-content p {
+.news-description {
   font-family: "Montserrat", Arial, sans-serif;
   color: #000000;
   text-align: left;
   margin: 0px 20px 20px 20px;
   font-size: 24px;
-  font-size: 20px;
 }
 
 .mat-card-content {
@@ -54,5 +53,24 @@ mat-card {
   button {
     width: 80%;
     margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .mat-card-content {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .news-description {
+    font-size: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 7; /* количество строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }

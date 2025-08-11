@@ -38,7 +38,7 @@ nav a,
   cursor: pointer;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .hide-on-mobile {
     display: none !important;
   }
@@ -147,5 +147,5 @@ button.btn-primary {
 
 .single-text-block-green {
   background-color: #efffdd;
-  padding: 20px;
+  //padding: 20px;
 }

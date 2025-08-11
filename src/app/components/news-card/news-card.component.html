@@ -1,20 +1,24 @@
 <div class="mat-card-wrap">
   <mat-card class="mat-card">
-    <img
-      mat-card-image
-      class="mat-card-image"
-      src="https://media1.tenor.com/m/4f40v0du6PIAAAAC/weed-shades-on.gif"
-    />
+    <img mat-card-image class="mat-card-image" [src]="news.imageUrl" />
     <mat-card-header class="mat-card-header">
-      <mat-card-title class="title"><h2>{{title}}</h2></mat-card-title>
+      <mat-card-title class="title"
+        ><h2>{{ news.title }}</h2></mat-card-title
+      >
     </mat-card-header>
     <mat-card-content class="mat-card-content">
-      <p>
-        {{description}}
+      <p class="news-description">
+        {{ news.description }}
       </p>
     </mat-card-content>
     <mat-card-footer class="footer">
-      <button class="btn-primary">Детальніше</button>
+      <button
+        class="btn-primary"
+        [routerLink]="['/news', news.slug]"
+        [state]="{ item: news }"
+      >
+        Детальніше
+      </button>
     </mat-card-footer>
   </mat-card>
 </div>

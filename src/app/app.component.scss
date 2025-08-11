@@ -63,7 +63,7 @@
 }
 
 .app-content {
-  padding: 10rem 4rem 4rem 4rem;
+  padding: 8rem 4rem 4rem 4rem;
   min-height: 100vh;
   box-sizing: border-box;
   display: flex;
@@ -78,17 +78,17 @@
   z-index: 100;
 }
 
-@media (min-width: 600px) and (max-width: 1400px) {
+@media (min-width: 1000px) and (max-width: 1400px) {
     .app-header {
     //height: 60px;
     
   }
 }
 
-@media (max-width: 600px) {
-  .app-header,
+@media (max-width: 1000px) {
   .app-content {
-    padding: 0 8px !important;
+    padding: 4rem 2px;
+    margin: 0;
   }
 
   .app-header {
@@ -97,6 +97,6 @@
   }
 
   .app-footer {
-    display: none !important;
+    display: none;
   }
 }
