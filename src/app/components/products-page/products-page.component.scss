@@ -1,6 +1,5 @@
 $accent: #93c756;
-$bg-green-weak: #f3faec;
-$bg-green-strong: #e6f4d7;
+$bg-green: #efffdd;
 $text: #1a1a1a;
 
 .product-page-wrap {
@@ -22,7 +21,7 @@ $text: #1a1a1a;
     }
 
     &:nth-child(even) {
-      background: $bg-green-weak;
+      background: $bg-green;
     }
     &:nth-child(odd) {
       background: #fff;
@@ -35,7 +34,6 @@ $text: #1a1a1a;
     }
     h2 {
       font-size: clamp(22px, 2.4vw, 32px);
-      //color: $accent;
       font-weight: 800;
       letter-spacing: 0.2px;
     }
@@ -48,6 +46,10 @@ $text: #1a1a1a;
       margin: 16px 0;
       line-height: 1.7;
       text-align: justify;
+    }
+
+    p:first-child{
+        font-size: 24px;
     }
 
     ul {
@@ -79,18 +81,13 @@ $text: #1a1a1a;
     }
   }
 
-  .summary {
-    font-size: 24px;
-  }
-
   .green-text { color: $accent; }
   .single-text-block-green {
-    background: $bg-green-weak;
     border-radius: 12px;
     padding: 12px 14px;
   }
 
-  .btn-primary {
+  .btn-primary { // not used yet
     font-family: "Montserrat", Arial, sans-serif;
     font-size: 18px;
     background-color: $accent;
@@ -112,5 +109,9 @@ $text: #1a1a1a;
   .product-page-wrap {
     padding: 12px;
     .section { padding: 16px; }
+  }
+
+  .summary p{
+    font-size: clamp(12px, 2vw, 20px);
   }
 }

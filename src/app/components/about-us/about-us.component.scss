@@ -1,3 +1,7 @@
+$accent: #93c756;
+$bg-green: #efffdd;
+$text: #1a1a1a;
+
 .main-page-wrap {
   display: flex;
   justify-content: center;
@@ -13,22 +17,13 @@
   padding-right: 5%;
 }
 
-@media (max-width: 600px) {
-  .main-page-text {
-    width: 90% !important;
-    padding-left: 0px !important;
-  }
-}
-
 .content {
   max-width: 1400px;
 }
 
 .about-us-page-img {
-  // border: 3px solid rgb(134, 40, 40);
   width: 30%;
   display: flex;
-  //justify-content: center;
   align-items: center;
   img {
     max-height: 700px;
@@ -62,13 +57,57 @@ h2 {
   flex-direction: row;
 }
 
+.single-text-block-white,
+.single-text-block-green {
+  border-radius: 12px;
+  padding: 20px 10px;
+}
+
+h2 {
+  padding-left: 20px;
+}
+
+@media (max-width: 400px) {
+  .main-text,
+  .accent-text {
+    padding-top: 10px;
+    font-size: clamp(24px, 2.4vw, 48px);
+  }
+
+  .main-page-text {
+    padding: 0 5px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+  .main-text,
+  .accent-text {
+    font-size: clamp(36px, 2.4vw, 54px);
+    padding-top: 10px;
+  }
+
+  .main-page-text {
+    padding: 0 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 @media (min-width: 600px) and (max-width: 1400px) {
   .about-us-page-img {
     display: none;
   }
 
   .main-page-text {
-    width: 90%;
+    width: 100%;
     text-align: center;
+    padding: 0 15px;
+  }
+
+  .main-text,
+  .accent-text {
+    font-size: clamp(64px, 2.4vw, 80px);
   }
 }
