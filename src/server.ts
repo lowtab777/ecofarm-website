@@ -60,6 +60,14 @@ if (isMainModule(import.meta.url)) {
   });
 }
 
+export async function getPrerenderParams(route: string) {
+  if (route === 'news/:slug') {
+    const slugs: string[] = (await import('./app/data/news-slug.json')).default;
+    return slugs.map((slug) => ({ slug }));
+  }
+  return [];
+}
+
 /**
  * Request handler used by the Angular CLI (for dev-server and during build) or Firebase Cloud Functions.
  */
