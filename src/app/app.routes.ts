@@ -9,7 +9,7 @@ import { ProductsPageComponent } from './components/products-page/products-page.
 import { NewsDetailedPageComponent } from './components/news-detailed-page/news-detailed-page.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '**', pathMatch: 'full' },
+  { path: '', redirectTo: 'main-page', pathMatch: 'full' },
   { path: 'news', component: NewsPageComponent },
   { path: 'news/:slug', component: NewsDetailedPageComponent},
   { path: 'contacts', component: ContactsComponent },
