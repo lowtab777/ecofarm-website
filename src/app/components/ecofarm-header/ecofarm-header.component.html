@@ -99,14 +99,18 @@
           </a>
         </nav>
 
-        <button
-          mat-icon-button
-          class="burger-menu show-on-mobile"
-          (click)="onMenuClick()"
-          aria-label="Меню"
-        >
-          <mat-icon>menu</mat-icon>
-        </button>
+        <div class="mobile-header show-on-mobile">
+          <img class="mobile-logo" src="images/ecofarmLogo.png" />
+          <button
+            mat-icon-button
+            class="burger-menu"
+            (click)="onMenuClick()"
+            aria-label="Меню"
+          >
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+        
       </div>
     </mat-toolbar>
   </mat-sidenav-content>
