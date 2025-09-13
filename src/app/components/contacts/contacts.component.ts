@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ContactInfoComponent } from '../contact-info/contact-info.component';
 import { CommonModule } from '@angular/common';
-import { ContactInterface } from '../../interfaces/contact-interface';
+import { ContactInterface } from '../../interfaces/contact-interface.model';
 import { MapComponent } from '../map/map.component';
 
 @Component({

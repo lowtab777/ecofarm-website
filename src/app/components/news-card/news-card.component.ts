@@ -4,7 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCard, MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
-import { NewsItem } from '../../interfaces/news-item';
+import { NewsItem } from '../../interfaces/news-item.model';
 
 @Component({
   selector: 'app-news-card',
