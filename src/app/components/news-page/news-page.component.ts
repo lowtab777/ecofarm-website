@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsCardComponent } from '../news-card/news-card.component';
 import { CommonModule } from '@angular/common';
-import { NewsItem } from '../../interfaces/news-item';
+import { NewsItem } from '../../interfaces/news-item.model';
 import { NewsRepository } from '../../services/news-repository.service';
 
 @Component({

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { NewsItem } from '../../interfaces/news-item';
+import { NewsItem } from '../../interfaces/news-item.model';
 import { NewsRepository } from '../../services/news-repository.service';
 
 @Component({

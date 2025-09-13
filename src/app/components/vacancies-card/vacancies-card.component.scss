@@ -1,0 +1,49 @@
+.vacancies-card-wrap {
+  border-radius: 20px;
+  border: 3px solid #93c756;
+}
+
+.mat-card {
+  margin: 10px;
+  gap: 5px;
+}
+
+.mat-card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 12px;
+  margin-right: 1rem;
+}
+
+.mat-card-title {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.social-icon {
+  display: block;
+  width: 100%;
+  max-height: 50px;
+  object-fit: cover;
+  //border-radius: 12px;
+  padding: 0;
+  border: 0;
+}
+
+.mat-card-button {
+  border-radius: 10px;
+  padding: 10px;
+  border: 0;
+  background-color: rgb(255, 255, 255);
+
+   &:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+}

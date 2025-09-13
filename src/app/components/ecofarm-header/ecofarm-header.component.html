@@ -79,6 +79,17 @@
 
           <a
             mat-button
+            routerLink="/vacancies"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            #rlaMain="routerLinkActive"
+            class="header-link"
+            >ВАКАНСІЇ
+            <mat-icon *ngIf="rlaMain.isActive">arrow_drop_down</mat-icon>
+          </a>
+
+          <a
+            mat-button
             routerLink="/contacts"
             routerLinkActive="active-link"
             #rlaContacts="routerLinkActive"
