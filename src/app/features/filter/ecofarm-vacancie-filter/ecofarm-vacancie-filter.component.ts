@@ -15,6 +15,7 @@ import { MatInput } from '@angular/material/input';
 import { debounceTime, map, Observable, startWith } from 'rxjs';
 import { MatButton } from '@angular/material/button';
 import { POSITIONS } from '../../../services/positions-repository.service';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-ecofarm-vacancie-filter',
@@ -26,6 +27,7 @@ import { POSITIONS } from '../../../services/positions-repository.service';
     MatInput,
     ReactiveFormsModule,
     MatButton,
+    MatIcon
   ],
   templateUrl: './ecofarm-vacancie-filter.component.html',
   styleUrl: './ecofarm-vacancie-filter.component.scss',

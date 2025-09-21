@@ -27,6 +27,7 @@ li {
 .single-text-block-green,
 .single-text-block-white {
   padding: 10px 30px;
+  border-radius: 16px;
 }
 
 .single-text-block-green {
@@ -67,7 +68,6 @@ ul li {
   margin-bottom: 8px;
 }
 
-/* Мобилки и планшеты до 1000px */
 @media (max-width: 999.98px) {
   .license-wrap {
     padding: 0 10px;
@@ -106,7 +106,6 @@ ul li {
   }
 }
 
-/* Мобилки до 360px */
 @media (max-width: 359.98px) {
   .license-content {
     display: flex;
