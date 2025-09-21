@@ -82,10 +82,10 @@
             routerLink="/vacancies"
             routerLinkActive="active-link"
             [routerLinkActiveOptions]="{ exact: true }"
-            #rlaMain="routerLinkActive"
+            #rlaVacancie="routerLinkActive"
             class="header-link"
             >ВАКАНСІЇ
-            <mat-icon *ngIf="rlaMain.isActive">arrow_drop_down</mat-icon>
+            <mat-icon *ngIf="rlaVacancie.isActive">arrow_drop_down</mat-icon>
           </a>
 
           <a

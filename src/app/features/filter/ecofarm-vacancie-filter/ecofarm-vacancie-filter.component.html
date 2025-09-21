@@ -1,0 +1,46 @@
+<div class="vacancie-filter-wrap">
+  <form [formGroup]="filterForm" class="filter-form">
+    <mat-form-field class="city-filter">
+      <mat-label>Оберіть місто</mat-label>
+      <input
+        type="text"
+        placeholder="Місто"
+        aria-label="Виберіть місто"
+        matInput
+        formControlName="city"
+        [matAutocomplete]="autoCity"
+      />
+      <mat-autocomplete autoActiveFirstOption #autoCity="matAutocomplete">
+        <mat-option
+          [value]="option"
+          class="mat-autocomplete-option"
+          *ngFor="let option of filteredCities | async"
+        >
+          {{ option }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
+    <mat-form-field class="city-filter">
+      <mat-label>Оберіть посаду</mat-label>
+      <input
+        type="text"
+        placeholder="Посада"
+        aria-label="Виберіть посаду"
+        matInput
+        formControlName="role"
+        [matAutocomplete]="autoPosition"
+      />
+      <mat-autocomplete autoActiveFirstOption #autoPosition="matAutocomplete">
+        <mat-option
+          [value]="option"
+          class="mat-autocomplete-option"
+          *ngFor="let option of filteredRoles | async"
+        >
+          {{ option }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
+  </form>
+</div>

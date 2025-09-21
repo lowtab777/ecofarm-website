@@ -1,9 +1,7 @@
-import { Region } from "./ukraine-regions";
-
 export interface Vacancie {
   id: string;
   title: string;
-  region?: Region;
+  region?: string;
   address: string;
 
   

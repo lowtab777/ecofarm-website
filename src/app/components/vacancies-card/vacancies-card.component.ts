@@ -15,7 +15,7 @@ export class VacanciesCardComponent implements OnInit {
 
   // add links between vacancies
   openTelegram() {
-    //window.open('https://t.me/CURDE', '_blank');
+    // window.open('https://t.me/CURDE', '_blank');
   }
   openViber() {
     //window.open('https://t.me/chik1k', '_blank');
