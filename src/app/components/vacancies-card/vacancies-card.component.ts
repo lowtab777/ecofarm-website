@@ -1,10 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { Vacancie } from '../../interfaces/vacancie.model';
+import { MatList, MatListItem, MatListItemIcon } from '@angular/material/list';
+import { MatIcon } from '@angular/material/icon';
+import { NgFor } from '@angular/common';
+import { MatLabel } from '@angular/material/form-field';
 
 @Component({
   selector: 'app-vacancies-card',
-  imports: [MatCardModule],
+  imports: [MatCardModule, MatList, MatListItem, MatIcon, NgFor, MatLabel, MatListItemIcon],
   templateUrl: './vacancies-card.component.html',
   styleUrl: './vacancies-card.component.scss',
 })

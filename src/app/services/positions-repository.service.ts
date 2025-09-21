@@ -1,1 +1,1 @@
-export const POSITIONS = ['Завідувач аптеки', 'Фармацевт'];
+export const POSITIONS = ['Завідувач аптеки'];

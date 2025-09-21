@@ -12,36 +12,114 @@ export class VacancieService {
   constructor() {
     const mockVacancies: Vacancie[] = [
       {
-        id: '1',
+        id: 1,
         title: 'Завідувач аптеки',
-        region: UAREGIONS[0],
+        region: UAREGIONS.find((v) => v === 'Вінниця')!,
         address: '',
-        salaryMin: 15000,
-        salaryMax: 30000,
+        salary: 30000,
         currency: 'UAH',
         schedule: '5/2, 8:00–20:00',
-        requirements:
-          'фармацевтична освіта, сертифікат провізора та повний пакет необхідних документів, організаторські здібності, відповідальність',
-        responsibilities: 'консультація клієнтів, відпуск препаратів',
+        requirements: [
+          'фармацевтична освіта',
+          'сертифікат провізора та повний пакет необхідних документів',
+          'організаторські здібності',
+          'відповідальність',
+        ],
+        responsibilities: ['консультація клієнтів', 'відпуск препаратів'],
+        description: `ТОВ «ФК «ЕКОФАРМ» запрошує до співпраці завідувачів аптек у всіх обласних центрах України (окрім тимчасово окупованих територій та регіонів з активними бойовими діями).`,
         postedAt: new Date().toISOString(),
         contacts: {
           phone: '+380 97 889 72 62',
-          telegram: '@https://t.me/CURDE',
+          telegram: '',
         },
       },
       {
-        id: '2',
-        title: 'Фармацевт',
-        region: UAREGIONS[11],
-        address: 'вул. Соборна, 151',
-        salaryMin: 15000,
-        salaryMax: 20000,
+        id: 2,
+        title: 'Завідувач аптеки',
+        region: UAREGIONS.find((v) => v === 'Київ')!,
+        address: '',
+        salary: 30000,
         currency: 'UAH',
-        schedule: '2/2, 9:00–21:00',
-        requirements: 'фармацевтична освіта',
-        responsibilities: 'консультація клієнтів, відпуск препаратів',
+        schedule: '5/2, 8:00–20:00',
+        requirements: [
+          'фармацевтична освіта',
+          'сертифікат провізора та повний пакет необхідних документів',
+          'організаторські здібності',
+          'відповідальність',
+        ],
+        responsibilities: ['консультація клієнтів', 'відпуск препаратів'],
+        description: `ТОВ «ФК «ЕКОФАРМ» запрошує до співпраці завідувачів аптек у всіх обласних центрах України (окрім тимчасово окупованих територій та регіонів з активними бойовими діями).`,
         postedAt: new Date().toISOString(),
-        contacts: { phone: '+380671234567', telegram: '@https://t.me/CURDE' },
+        contacts: {
+          phone: '+380 97 889 72 62',
+          telegram: '',
+        },
+      },
+      {
+        id: 3,
+        title: 'Завідувач аптеки',
+        region: UAREGIONS.find((v) => v === 'Тернопіль')!,
+        address: '',
+        salary: 30000,
+        currency: 'UAH',
+        schedule: '5/2, 8:00–20:00',
+        requirements: [
+          'фармацевтична освіта',
+          'сертифікат провізора та повний пакет необхідних документів',
+          'організаторські здібності',
+          'відповідальність',
+        ],
+        responsibilities: ['консультація клієнтів', 'відпуск препаратів'],
+        description: `ТОВ «ФК «ЕКОФАРМ» запрошує до співпраці завідувачів аптек у всіх обласних центрах України (окрім тимчасово окупованих територій та регіонів з активними бойовими діями).`,
+        postedAt: new Date().toISOString(),
+        contacts: {
+          phone: '+380 97 889 72 62',
+          telegram: '',
+        },
+      },
+      {
+        id: 4,
+        title: 'Завідувач аптеки',
+        region: UAREGIONS.find((v) => v === 'Одеса')!,
+        address: '',
+        salary: 30000,
+        currency: 'UAH',
+        schedule: '5/2, 8:00–20:00',
+        requirements: [
+          'фармацевтична освіта',
+          'сертифікат провізора та повний пакет необхідних документів',
+          'організаторські здібності',
+          'відповідальність',
+        ],
+        responsibilities: ['консультація клієнтів', 'відпуск препаратів'],
+        description: `ТОВ «ФК «ЕКОФАРМ» запрошує до співпраці завідувачів аптек у всіх обласних центрах України (окрім тимчасово окупованих територій та регіонів з активними бойовими діями).`,
+        postedAt: new Date().toISOString(),
+        contacts: {
+          phone: '+380 97 889 72 62',
+          telegram: '',
+        },
+      },
+      {
+        id: 5,
+        title: 'Завідувач аптеки',
+        region: UAREGIONS.find((v) => v === 'Кропивницький')!,
+        address: '',
+        salary: 30000,
+        currency: 'UAH',
+        schedule: '5/2, 8:00–20:00',
+        requirements: [
+          'фармацевтична освіта',
+          'сертифікат провізора та повний пакет необхідних документів',
+          'організаторські здібності',
+          'відповідальність',
+        ],
+        responsibilities: ['консультація клієнтів', 'відпуск препаратів'],
+        description: `ТОВ «ФК «ЕКОФАРМ» запрошує до співпраці завідувачів аптек у всіх обласних центрах України (окрім тимчасово окупованих територій та регіонів з активними бойовими діями).`,
+        postedAt: new Date().toISOString(),
+        contacts: {
+          phone: '+380 97 889 72 62',
+          telegram: '',
+        },
       },
     ];
     this.vacanciesSubject.next(mockVacancies);
@@ -56,7 +134,7 @@ export class VacancieService {
     this.vacanciesSubject.next([...temp, newVacancie]);
   }
 
-  deleteVacancie(id: string) {
+  deleteVacancie(id: number) {
     const filtered = this.getVacancies().filter((v) => v.id !== id);
     this.vacanciesSubject.next(filtered);
   }
