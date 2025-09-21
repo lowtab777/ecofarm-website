@@ -1,29 +1,74 @@
 <div class="vacancies-card-wrap">
   <mat-card class="mat-card">
     <mat-card-header class="mat-card-header">
-      <mat-card-title class="mat-card-title">{{ vacancie.title }}</mat-card-title>
-      <mat-card-subtitle class="mat-card-subtitle">{{ vacancie.address }}</mat-card-subtitle>
+      <mat-card-title class="mat-card-title">
+        {{ vacancie.title }}
+      </mat-card-title>
+      <mat-card-subtitle class="mat-card-subtitle">
+        {{ vacancie.region }}</mat-card-subtitle
+      >
     </mat-card-header>
 
     <mat-card-content class="mat-card-content">
       <p>
-        <strong>Заробітня плата: </strong>{{ vacancie.salaryMin }} - {{ vacancie.salaryMax }}
+        {{ vacancie.description }}
+      </p>
+      <p>
+        <strong>Заробітня плата: </strong>{{ vacancie.salary }}
         {{ vacancie.currency }}
       </p>
-      <p><strong>Графік:</strong> 2/2, з 9:00 до 21:00</p>
-      <p>
-        <strong>Необхідний досвід:</strong> фарм. освіта, досвід від 1 року
-      </p>
-      <p>
-        <strong>Обов'язки:</strong> {{vacancie.responsibilities}}
-      </p>
+      <p><strong>Графік:</strong> {{ vacancie.schedule }}</p>
+
+      <section class="requirements">
+        <mat-list class="card-mat-list">
+          <div mat-subheader><strong>Вимоги:</strong></div>
+          <mat-list-item
+            class="card-mat-list-item"
+            *ngFor="let req of vacancie.requirements"
+          >
+            <mat-icon matListItemIcon>check</mat-icon>
+            <div matListItemLine>{{ req }}</div>
+          </mat-list-item>
+        </mat-list>
+      </section>
+      <section class="detailed-vacancie-info">
+        <mat-list class="card-mat-list">
+          <div mat-subheader><strong>Обов'язки:</strong></div>
+          <mat-list-item
+            class="card-mat-list-item"
+            *ngFor="let resp of vacancie.responsibilities"
+          >
+            <mat-icon matListItemIcon>assignment</mat-icon>
+            <div matListItemLine>{{ resp }}</div>
+          </mat-list-item>
+        </mat-list>
+      </section>
     </mat-card-content>
 
     <!-- add more buttons for tg, viber, whatsapp -->
-    <mat-card-footer class="mat-card-footer"> 
-      <button class="btn-primary mat-card-button" mat-button (click)="openTelegram()"><img mat-image class="social-icon" src="images/telegram-icon.png" /> </button>
-      <button class="btn-primary mat-card-button" mat-button><img mat-image class="social-icon" src="images/viber-icon.png" /> </button>
-      <button class="btn-primary mat-card-button" mat-button><img mat-image class="social-icon" src="images/whatsapp-icon.png" /> </button>
+    <mat-card-footer class="mat-card-footer">
+      <div class="phone-number">
+        <mat-icon>phone</mat-icon>
+        <p>
+          За детальною інформацією телефонуйте:
+          <strong>+380 97 889 72 62</strong>
+        </p>
+      </div>
+
+      <!-- for better times -->
+      <!-- <button
+        class="btn-primary mat-card-button"
+        mat-button
+        (click)="openTelegram()"
+      >
+        <img mat-image class="social-icon" src="images/telegram-icon.png" />
+      </button>
+      <button class="btn-primary mat-card-button" mat-button>
+        <img mat-image class="social-icon" src="images/viber-icon.png" />
+      </button>
+      <button class="btn-primary mat-card-button" mat-button>
+        <img mat-image class="social-icon" src="images/whatsapp-icon.png" />
+      </button> -->
     </mat-card-footer>
   </mat-card>
 </div>
