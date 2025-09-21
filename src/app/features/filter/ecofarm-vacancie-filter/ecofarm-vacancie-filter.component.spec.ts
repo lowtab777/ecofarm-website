@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EcofarmGeneralFilterComponent } from './ecofarm-general-filter.component';
+import { EcofarmVacancieFilterComponent } from './ecofarm-vacancie-filter.component';
 
 describe('EcofarmGeneralFilterComponent', () => {
-  let component: EcofarmGeneralFilterComponent;
-  let fixture: ComponentFixture<EcofarmGeneralFilterComponent>;
+  let component: EcofarmVacancieFilterComponent;
+  let fixture: ComponentFixture<EcofarmVacancieFilterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EcofarmGeneralFilterComponent]
+      imports: [EcofarmVacancieFilterComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(EcofarmGeneralFilterComponent);
+    fixture = TestBed.createComponent(EcofarmVacancieFilterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -18,6 +18,20 @@
   --md-sys-color-on-error: #fff;
   --md-sys-color-on-background: #232323;
   --md-sys-color-on-surface: #232323;
+
+  .mat-mdc-autocomplete-panel {
+    background: #fff; // общий фон для всей панели
+  }
+
+  .mat-mdc-option.mdc-list-item {
+    background: #fff; // фон элементов по умолчанию
+    color: #000; // текст видимый
+  }
+
+  .mat-mdc-option.mdc-list-item.mdc-list-item--selected,
+  .mat-mdc-option.mdc-list-item:hover {
+    background: #e6f2ff; // подсветка при ховере/выборе
+  }
 }
 
 html,
