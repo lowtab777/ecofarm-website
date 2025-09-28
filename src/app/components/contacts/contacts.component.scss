@@ -21,7 +21,8 @@
   letter-spacing: 2px;
   line-height: 1;
   color: #93c756;
-  font-size: clamp(32px, 8vw, 100px);
+  font-size: 120px;
+  //font-size: clamp(32px, 8vw, 100px);
 }
 
 .content {
@@ -83,7 +84,7 @@
 
 
 @media (max-width: 999.98px) {
-  .contacts-wrap { padding: 0 10px; }
+  .contacts-wrap { padding: 0 10px; margin-right: 0; }
 
   .content {
     flex-direction: column;
