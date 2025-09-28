@@ -24,6 +24,11 @@
   font-weight: 500;
 }
 
+.mat-card-subtitle {
+  font-size: 20px;
+  font-weight: 500;
+}
+
 .social-icon {
   display: block;
   width: 100%;
@@ -70,5 +75,11 @@
   &:active {
     transform: translateY(0px);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 600px) {
+  .phone-number mat-icon {
+    font-size: 20px;
   }
 }
