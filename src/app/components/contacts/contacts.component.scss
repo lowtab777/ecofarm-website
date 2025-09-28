@@ -114,7 +114,7 @@
 @media (max-width: 599.98px) {
   .content { gap: 12px; }
 
-  .main-text { font-size: clamp(26px, 10vw, 48px); }
+  .main-text { font-size: clamp(32px, 16vw, 60px); }
 
   .contacts-map app-map,
   .contacts-map { height: 45vh; }
@@ -126,7 +126,7 @@
   .contacts-wrap { padding: 0 8px; }
   .content { gap: 10px; }
 
-  .main-text { font-size: clamp(22px, 11vw, 40px); }
+  .main-text { font-size: clamp(28px, 16vw, 60px); }
 
   .contacts-map app-map,
   .contacts-map { height: 38vh; }
