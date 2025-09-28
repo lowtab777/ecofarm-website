@@ -105,6 +105,19 @@ mat-sidenav-content {
   overflow: hidden;
 }
 
+.mobile-header-logo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: 42px;
+    align-items: center;
+    font-weight: 300;
+  }
+}
+
 @media (max-width: 1000px) {
   .hide-on-mobile {
     display: none !important;
