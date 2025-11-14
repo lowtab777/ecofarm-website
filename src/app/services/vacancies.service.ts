@@ -14,7 +14,7 @@ export class VacancieService {
       {
         id: 1,
         title: 'Завідувач аптеки',
-        region: UAREGIONS.find((v) => v === 'Вінниця')!,
+        region: UAREGIONS.find((v) => v === 'Луцьк')!,
         address: '',
         salary: 30000,
         currency: 'UAH',
@@ -58,7 +58,7 @@ export class VacancieService {
       {
         id: 3,
         title: 'Завідувач аптеки',
-        region: UAREGIONS.find((v) => v === 'Тернопіль')!,
+        region: UAREGIONS.find((v) => v === 'Рівне')!,
         address: '',
         salary: 30000,
         currency: 'UAH',
@@ -102,7 +102,7 @@ export class VacancieService {
       {
         id: 5,
         title: 'Завідувач аптеки',
-        region: UAREGIONS.find((v) => v === 'Кропивницький')!,
+        region: UAREGIONS.find((v) => v === 'Чернівці')!,
         address: '',
         salary: 30000,
         currency: 'UAH',
