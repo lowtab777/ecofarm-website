@@ -19,3 +19,4 @@ export class NewsPageComponent implements OnInit {
     this.newsList = this.repo.getAll();
   }
 }
+ 
