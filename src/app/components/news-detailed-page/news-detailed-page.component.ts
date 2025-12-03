@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { NewsItem } from '../../interfaces/news-item.model';
 import { NewsRepository } from '../../services/news-repository.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-news-detailed-page',
@@ -17,14 +18,13 @@ export class NewsDetailedPageComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private repo: NewsRepository,
-    private router: Router
+    private router: Router,
+    private titleService: Title
   ) {}
 
   ngOnInit(): void {
-    console.log('onInit')
     const slug = this.route.snapshot.paramMap.get('slug') ?? '';
     if (!slug) {
-      console.log('[NewsDetailed] slug пустой, возвращаю на /news');
       this.router.navigate(['/news']);
       return;
     }
@@ -32,9 +32,9 @@ export class NewsDetailedPageComponent implements OnInit {
     const found = this.repo.bySlug(slug);
     if (found) {
       this.news = found;
+      this.titleService.setTitle(`${this.news.title} - Екофарм`);
       return;
     }
-    console.log(`[NewsDetailed] новость не найдена по slug="${slug}"`);
     // in case nothing has been found
     this.router.navigate(['/news']);
   }
