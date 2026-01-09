@@ -48,6 +48,13 @@ export class ContactsComponent implements OnInit {
       phoneNumber: '+38 (067) 321 64 75',
       mapSource:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5291.034276030505!2d35.03681535155341!3d48.4657935047985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2e697e36c99%3A0xfde5e2ab063b5f98!2z0LLRg9C70LjRhtGPINCc0LXRh9C90LjQutC-0LLQsCwgMSwg0JTQvdGW0L_RgNC-LCDQlNC90ZbQv9GA0L7Qv9C10YLRgNC-0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNDkwMDA!5e0!3m2!1suk!2sua!4v1764791570177!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"',
+    },
+    {
+      id: 4,
+      address: 'м. Вінниця, вул. Генерала Гандзюка, 17',
+      phoneNumber: '+38 (067) 464 05 91',
+      mapSource:
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2606.3591248702646!2d28.439926104438346!3d49.212716003103964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5b7a5d1abdd7%3A0x57026f8ab8534a12!2z0LLRg9C7LiDQk9C10L3QtdGA0LDQu9CwINCT0LDQvdC00LfRjtC60LAsIDE3LCDQktGW0L3QvdC40YbRjywg0JLRltC90L3QuNGG0YzQutCwINC-0LHQu9Cw0YHRgtGMLCAyMTAwMA!5e0!3m2!1suk!2sua!4v1767988527418!5m2!1suk!2sua" width="600" height="450" style="border:0; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"',
     }
   ];
 
