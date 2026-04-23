@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Vacancie } from '../interfaces/vacancie.model';
+import { Vacancy } from '../interfaces/vacancie.model';
 import { UAREGIONS } from './ua-regions-repository.service';
 
 @Injectable({ providedIn: 'root' })
-export class VacancieService {
-  private vacanciesSubject = new BehaviorSubject<Vacancie[]>([]);
+export class VacancyService {
+  private vacanciesSubject = new BehaviorSubject<Vacancy[]>([]);
 
-  vacancies$: Observable<Vacancie[]> = this.vacanciesSubject.asObservable();
+  vacancies$: Observable<Vacancy[]> = this.vacanciesSubject.asObservable();
 
   constructor() {
-    const mockVacancies: Vacancie[] = [
+    const mockVacancies: Vacancy[] = [
       {
         id: 1,
         title: 'Завідувач аптеки',
@@ -125,16 +125,16 @@ export class VacancieService {
     this.vacanciesSubject.next(mockVacancies);
   }
 
-  getVacancies(): Vacancie[] {
+  getVacancies(): Vacancy[] {
     return this.vacanciesSubject.getValue();
   }
 
-  addVacancie(newVacancie: Vacancie): void {
+  addVacancy(newVacancy: Vacancy): void {
     const temp = this.getVacancies();
-    this.vacanciesSubject.next([...temp, newVacancie]);
+    this.vacanciesSubject.next([...temp, newVacancy]);
   }
 
-  deleteVacancie(id: number) {
+  deleteVacancy(id: number) {
     const filtered = this.getVacancies().filter((v) => v.id !== id);
     this.vacanciesSubject.next(filtered);
   }

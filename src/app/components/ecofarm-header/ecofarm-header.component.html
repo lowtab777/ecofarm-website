@@ -4,7 +4,7 @@
       <div class="toolbar-elements">
         <nav class="nav-menu hide-on-mobile">
           <div class="row">
-            <h1 class="xxl logo">ФК</h1>
+            <h1 class="brand-prefix">ФК</h1>
             <img
               src="images/ecofarmLogo.png"
               routerLink="/main-page"
@@ -12,96 +12,26 @@
               [routerLinkActiveOptions]="{ exact: true }"
               #rlaMain="routerLinkActive"
               alt="Logo"
-              class="show-always logo"
+              class="show-always logo-image"
             />
           </div>
 
           <a
+            *ngFor="let item of navItems"
             mat-button
-            routerLink="/main-page"
+            [routerLink]="item.path"
             routerLinkActive="active-link"
-            [routerLinkActiveOptions]="{ exact: true }"
-            #rlaMain="routerLinkActive"
+            [routerLinkActiveOptions]="{ exact: !!item.exact }"
+            #rla="routerLinkActive"
             class="header-link"
-            >МЕДИЧНИЙ КАНАБІС
-            <mat-icon *ngIf="rlaMain.isActive">arrow_drop_down</mat-icon>
-          </a>
-
-          <a
-            mat-button
-            routerLink="/about-us"
-            routerLinkActive="active-link"
-            #rlaAboutUs="routerLinkActive"
-            class="header-link"
-            >ПРО НАС
-            <mat-icon *ngIf="rlaAboutUs.isActive">arrow_drop_down</mat-icon>
-          </a>
-
-          <a
-            mat-button
-            routerLink="/products"
-            routerLinkActive="active-link"
-            #rlaProducts="routerLinkActive"
-            class="header-link"
-            >АПТЕЧНЕ ВИГОТОВЛЕННЯ
-            <mat-icon *ngIf="rlaProducts.isActive">arrow_drop_down</mat-icon>
-          </a>
-
-          <a
-            mat-button
-            routerLink="/team"
-            routerLinkActive="active-link"
-            #rlaTeam="routerLinkActive"
-            class="header-link"
-            >КОМАНДА
-            <mat-icon *ngIf="rlaTeam.isActive">arrow_drop_down</mat-icon>
-          </a>
-
-          <a
-            mat-button
-            routerLink="/news"
-            routerLinkActive="active-link"
-            #rlaNews="routerLinkActive"
-            class="header-link"
-            >НОВИНИ
-            <mat-icon *ngIf="rlaNews.isActive">arrow_drop_down</mat-icon>
-          </a>
-
-          <a
-            mat-button
-            routerLink="/licenses"
-            routerLinkActive="active-link"
-            #rlaLicenses="routerLinkActive"
-            class="header-link"
-            >ЛІЦЕНЗІЇ
-            <mat-icon *ngIf="rlaLicenses.isActive">arrow_drop_down</mat-icon>
-          </a>
-
-          <a
-            mat-button
-            routerLink="/vacancies"
-            routerLinkActive="active-link"
-            [routerLinkActiveOptions]="{ exact: true }"
-            #rlaVacancie="routerLinkActive"
-            class="header-link"
-            >ВАКАНСІЇ
-            <mat-icon *ngIf="rlaVacancie.isActive">arrow_drop_down</mat-icon>
-          </a>
-
-          <a
-            mat-button
-            routerLink="/contacts"
-            routerLinkActive="active-link"
-            #rlaContacts="routerLinkActive"
-            class="header-link"
-            >КОНТАКТИ
-            <mat-icon *ngIf="rlaContacts.isActive">arrow_drop_down</mat-icon>
+            >{{ item.label }}
+            <mat-icon *ngIf="rla.isActive">arrow_drop_down</mat-icon>
           </a>
         </nav>
 
         <div class="mobile-header show-on-mobile">
           <div class="mobile-header-logo">
-            <h1>ФК</h1>
+            <h1 class="brand-prefix">ФК</h1>
             <img class="mobile-logo" src="images/ecofarmLogo.png" />
           </div>
           <button

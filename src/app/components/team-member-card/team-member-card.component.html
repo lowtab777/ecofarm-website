@@ -6,12 +6,12 @@
       <h2>{{ name }}</h2>
     </mat-card-header>
 
-    <mat-card-content class="card-content" *ngIf="isOpened" [@toggleDescrtiption]>
+    <mat-card-content class="card-content" *ngIf="isOpened" [@toggleDescription]>
       <p>{{ description }}</p>
     </mat-card-content>
 
     <mat-card-footer class="card-footer">
-      <button class="btn-primary" mat-button (click)="descrtiptionClicked()">
+      <button class="btn-primary" mat-button (click)="descriptionClicked()">
         {{ isOpened ? "Згорнути" : "Детальніше" }}
       </button>
     </mat-card-footer>

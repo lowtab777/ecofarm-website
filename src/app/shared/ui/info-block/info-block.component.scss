@@ -1,0 +1,16 @@
+@use "../../../../styles/tokens" as t;
+@use "../../../../styles/mixins" as m;
+
+:host {
+  display: block;
+}
+
+.single-text-block-green {
+  @include m.text-block(t.$space-3, t.$space-5);
+  background-color: t.$color-bg-green;
+}
+
+.single-text-block-white {
+  @include m.text-block(t.$space-3, t.$space-5);
+  background-color: t.$color-surface;
+}

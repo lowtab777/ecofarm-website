@@ -1,0 +1,14 @@
+:host {
+  display: block;
+}
+
+.headline {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-text,
+.accent-text {
+  margin: 0;
+}

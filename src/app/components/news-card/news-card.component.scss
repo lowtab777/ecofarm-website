@@ -1,80 +1,94 @@
-mat-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .mat-card-wrap {
-  display: flex;
-  flex-direction: row;
+  display: block;
   justify-content: center;
   border-radius: 20px;
-  border: 5px solid #93c756;
-  height: 100%;
+  border: 3px solid #93c756;
   width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+@media (min-width: 1001px) {
+  .mat-card-wrap {
+    height: 100%;
+  }
+}
+
+.mat-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 520px;
+  box-shadow: none;
+  border-radius: 16px;
 }
 
 .mat-card-image {
-  height: 200px;
-  width: 100%;
+  height: clamp(180px, 22vw, 230px);
+  width: calc(100% - 24px);
   border-radius: 10px;
-  margin: 20px 10px 0px 10px;
+  margin: 12px 12px 0 12px;
   object-fit: cover;
 }
 
 .title {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   color: rgb(0, 0, 0);
-  flex: 1;
+  margin: 0;
+}
+
+.title h2 {
+  margin: 8px 0 4px;
+  font-size: clamp(20px, 1.8vw, 28px);
+  line-height: 1.25;
+  font-weight: 700;
+  max-height: calc(1.25em * 2);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
 }
 
 .news-description {
   font-family: "Montserrat", Arial, sans-serif;
-  color: #000000;
+  color: #1f1f1f;
   text-align: left;
-  margin: 0px 20px 20px 20px;
-  font-size: 24px;
+  margin: 0 12px 8px;
+  font-size: clamp(15px, 1vw, 18px);
+  line-height: 1.55;
 
-    display: -webkit-box;
-    -webkit-line-clamp: 7;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.mat-card-content {
-  margin: 0 15px;
-  flex: 5;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
+.mat-card-content {
+  margin: 0;
+  padding: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
 .footer {
-  flex: 2;
-  margin-top: 20px;
+  margin-top: auto;
+  padding: 0 12px 12px;
   width: 100%;
+  display: flex;
+  justify-content: center;
 
   button {
-    width: 80%;
-    margin-bottom: 10px;
+    width: clamp(170px, 72%, 220px);
+    min-height: 46px;
+    margin-bottom: 0;
   }
 }
 
 @media (max-width: 1000px) {
-  .mat-card-content {
-    margin: 0px;
-    padding: 0px;
-  }
-
-  .title {
-    font-size: 14px;
-  }
-
-  .news-description {
-    font-size: 20px;
-    display: -webkit-box;
-    -webkit-line-clamp: 7;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  .mat-card {
+    min-height: 460px;
   }
 }

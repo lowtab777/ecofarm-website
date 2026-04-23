@@ -20,10 +20,8 @@ export class ContactsComponent implements OnInit {
   }
 
   scrollToMap(): void {
-    console.log('non exis')
-    if(this.mapRef){
-      console.log('ref')
-      this.mapRef.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+    if (this.mapRef) {
+      this.mapRef.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 
@@ -58,7 +56,7 @@ export class ContactsComponent implements OnInit {
     }
   ];
 
-  handleAddressChange(newId: number){
+  handleAddressChange(newId: number) {
     this.selectedAddressId = newId;
   }
 }

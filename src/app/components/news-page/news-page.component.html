@@ -1,9 +1,9 @@
 <div class="news-wrap">
-  <p class="header">НОВИНИ</p>
+  <h1 class="header">НОВИНИ</h1>
   <div class="news-list">
     <app-news-card
       *ngFor="let item of newsList"
-      class="width-20 width-mobile-80 news-card"
+      class="news-card"
       [news]="item"
     ></app-news-card>
   </div>

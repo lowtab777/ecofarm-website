@@ -8,7 +8,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
   templateUrl: './team-member-card.component.html',
   styleUrl: './team-member-card.component.scss',
   animations: [
-    trigger('toggleDescrtiption', [
+    trigger('toggleDescription', [
       transition(':enter', [
         style({ height: 0, opacity: 1 }), 
         animate('300ms ease-out', style({height: '*', opacity: 1}))]),
@@ -25,7 +25,7 @@ export class TeamMemberCardComponent {
 
   isOpened: boolean = false;
 
-  descrtiptionClicked(): void {
+  descriptionClicked(): void {
     this.isOpened = !this.isOpened;
   }
 }

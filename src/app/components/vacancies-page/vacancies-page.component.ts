@@ -1,11 +1,11 @@
-import { VacancieService } from './../../services/vacancies.service';
+import { VacancyService } from './../../services/vacancies.service';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
 import { VacanciesCardComponent } from '../vacancies-card/vacancies-card.component';
-import { Vacancie } from '../../interfaces/vacancie.model';
-import { EcofarmVacancieFilterComponent } from '../../features/filter/ecofarm-vacancie-filter/ecofarm-vacancie-filter.component';
+import { Vacancy } from '../../interfaces/vacancie.model';
+import { EcofarmVacancyFilterComponent } from '../../features/filter/ecofarm-vacancie-filter/ecofarm-vacancie-filter.component';
 
 @Component({
   selector: 'app-vacancies-page',
@@ -14,34 +14,33 @@ import { EcofarmVacancieFilterComponent } from '../../features/filter/ecofarm-va
     CommonModule,
     MatButtonModule,
     VacanciesCardComponent,
-    EcofarmVacancieFilterComponent,
+    EcofarmVacancyFilterComponent,
   ],
   templateUrl: './vacancies-page.component.html',
   styleUrl: './vacancies-page.component.scss',
 })
 export class VacanciesPageComponent implements OnInit {
-  private _vacanciesOrigin!: Vacancie[];
-  vacancies!: Vacancie[];
+  private _vacanciesOrigin!: Vacancy[];
+  vacancies!: Vacancy[];
 
-  isVacancieListEmpty: boolean = true;
+  isVacancyListEmpty: boolean = true;
 
   private _cityFilterValue = '';
   private _roleFilterValue = '';
 
-  constructor(private vacancieService: VacancieService) {}
+  constructor(private vacancyService: VacancyService) {}
 
   ngOnInit(): void {
-    this._vacanciesOrigin = this.vacancieService.getVacancies();
+    this._vacanciesOrigin = this.vacancyService.getVacancies();
     this.vacancies = [...this._vacanciesOrigin];
   }
 
   onCityFilterChange(query: string) {
-    // replace w observable subsription for filterVacancies()
     this._cityFilterValue = query;
     this.filterVacancies();
   }
 
-  onRoleFIlterChange(query: string) {
+  onRoleFilterChange(query: string) {
     this._roleFilterValue = query;
     this.filterVacancies();
   }

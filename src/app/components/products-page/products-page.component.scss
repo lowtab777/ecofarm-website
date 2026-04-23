@@ -1,107 +1,59 @@
-$accent: #93c756;
-$bg-green: #efffdd;
-$text: #1a1a1a;
+@use "../../../styles/tokens" as t;
+@use "../../../styles/mixins" as m;
 
 .product-page-wrap {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 16px;
-  color: $text;
+  padding: 24px 16px;
+  color: t.$color-text-primary;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 
-  .section {
-    border-radius: 16px;
-    padding: 24px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-
-    &:first-child{
-        padding-top: 0px;
-    }
-
-    &:nth-child(even) {
-      background: $bg-green;
-    }
-    &:nth-child(odd) {
-      background: #fff;
-       box-shadow: none;
-    }
-
-    h2, h3 {
-      margin: 0 0 14px;
-      line-height: 1.3;
-    }
-    h2 {
-      font-size: clamp(22px, 2.4vw, 32px);
-      font-weight: 800;
-      letter-spacing: 0.2px;
-    }
-    h3 {
-      font-size: clamp(18px, 2vw, 24px);
-      font-weight: 700;
-    }
-
-    p {
-      margin: 16px 0;
-      line-height: 1.7;
-      text-align: justify;
-    }
-
-    p:first-child{
-        font-size: 24px;
-    }
-
-    ul {
-      padding-left: 1.2em;
-      line-height: 1.7;
-      margin: 10px 0 16px;
-      li {
-        margin-bottom: 10px;
-        font-family: "Montserrat", Arial, sans-serif;
-      }
-    }
-
-    .checklist {
-      list-style: none;
-      padding-left: 0;
-      li {
-        position: relative;
-        padding-left: 28px;
-        margin-bottom: 10px;
-        &::before {
-          content: '✔';
-          position: absolute;
-          left: 0;
-          top: 0.1em;
-          font-weight: 700;
-          color: $accent;
-        }
-      }
-    }
+  .description .headline {
+    margin: 0;
+    align-items: flex-start;
   }
 
-  .green-text { color: $accent; }
+  .description .headline .main-text {
+    font-size: clamp(34px, 3.5vw, 56px);
+  }
+
+  .description .headline .accent-text {
+    font-size: clamp(40px, 4.2vw, 72px);
+  }
+
+  app-content-section .section > div {
+    max-width: 78ch;
+  }
+
+  app-content-section .section ul {
+    padding-left: 1.2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.7;
+  }
+
+  app-content-section .section p,
+  app-content-section .section li {
+    text-align: left;
+    line-height: 1.7;
+    font-size: clamp(16px, 1.2vw, 18px);
+  }
+
+  app-content-section .section li {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: t.$font-family-base;
+  }
+
+  .section-subtitle-strong {
+    font-weight: 800;
+  }
+
+  .green-text { color: t.$color-accent; }
   .single-text-block-green {
-    border-radius: 12px;
-    padding: 12px 14px;
-  }
-
-  .btn-primary { // not used yet
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 18px;
-    background-color: $accent;
-    height: 46px;
-    min-width: 200px;
-    color: #fff;
-    margin-top: 16px;
-    font-weight: 700;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    transition: transform .06s ease, background-color .2s ease;
-    &:hover { background-color: darken($accent, 6%); }
-    &:active { transform: translateY(1px); }
+    @include m.text-block(t.$space-3, 14px);
   }
 }
 
@@ -109,9 +61,21 @@ $text: #1a1a1a;
   .product-page-wrap {
     padding: 12px;
     .section { padding: 16px; }
+
+    .description .headline .main-text {
+      font-size: clamp(22px, 7vw, 34px);
+    }
+
+    .description .headline .accent-text {
+      font-size: clamp(28px, 9vw, 42px);
+    }
+
+    app-content-section .section > div {
+      max-width: 100%;
+    }
   }
 
   .summary p{
-    font-size: clamp(12px, 2vw, 20px);
+    font-size: clamp(16px, 4.2vw, 20px);
   }
 }

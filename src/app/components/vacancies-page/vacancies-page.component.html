@@ -1,15 +1,12 @@
 <div class="vacancie-page-wrap">
-  <!-- <div *ngIf="!vacancie">
-        <p>На даний момент вакасії відсутні</p>
-    </div> -->
   <div class="vacancie-filter">
-    <app-ecofarm-vacancie-filter
+    <app-ecofarm-vacancy-filter
       (filterCityChange)="onCityFilterChange($event)"
-      (filterRoleChange)="onRoleFIlterChange($event)"
-    ></app-ecofarm-vacancie-filter>
+      (filterRoleChange)="onRoleFilterChange($event)"
+    ></app-ecofarm-vacancy-filter>
   </div>
 
   <div class="vacancies-list">
-    <app-vacancies-card *ngFor="let vacancie of vacancies" [vacancie]="vacancie"></app-vacancies-card>
+    <app-vacancies-card *ngFor="let vacancy of vacancies" [vacancy]="vacancy"></app-vacancies-card>
   </div>
 </div>

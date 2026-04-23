@@ -1,3 +1,6 @@
+@use "./styles/tokens" as t;
+@use "./styles/mixins" as m;
+
 .ecofarm-light-theme {
   /* Primary (green) */
   --md-sys-color-primary: #1d8348;
@@ -74,34 +77,34 @@ nav a,
 }
 
 p {
-  font-family: "Montserrat", Arial, sans-serif;
-  color: #303030;
+  font-family: t.$font-family-base;
+  color: t.$color-text-secondary;
 }
 
 span {
-  font-family: "Montserrat", Arial, sans-serif;
-  color: #303030;
+  font-family: t.$font-family-base;
+  color: t.$color-text-secondary;
 }
 
 li {
-  font-family: "Montserrat", Arial, sans-serif;
-  color: #303030;
+  font-family: t.$font-family-base;
+  color: t.$color-text-secondary;
 }
 
 h1 {
-  font-family: "Montserrat", Arial, sans-serif;
-  color: #202020;
+  font-family: t.$font-family-base;
+  color: t.$color-text-primary;
 }
 
 h2 {
-  font-family: "Montserrat", Arial, sans-serif;
-  color: #202020;
+  font-family: t.$font-family-base;
+  color: t.$color-text-primary;
   font-weight: 600;
 }
 
 h3 {
-  font-family: "Montserrat", Arial, sans-serif;
-  color: #202020;
+  font-family: t.$font-family-base;
+  color: t.$color-text-primary;
   font-weight: 500;
 }
 
@@ -109,24 +112,7 @@ h3 {
   text-align: left;
   display: flex;
   flex-direction: column;
-
-  .main-text {
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 60px;
-    color: #232323;
-    font-weight: 100;
-    letter-spacing: 2px;
-    line-height: 1;
-  }
-
-  .accent-text {
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 80px;
-    color: #93c756;
-    font-weight: 100;
-    letter-spacing: 5px;
-    line-height: 1;
-  }
+  @include m.headline-typography;
 }
 
 .font-weight-700 {
@@ -158,5 +144,5 @@ button.btn-primary {
 }
 
 .single-text-block-green {
-  background-color: #efffdd;
+  background-color: t.$color-bg-green;
 }
