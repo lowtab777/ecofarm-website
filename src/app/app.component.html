@@ -12,6 +12,7 @@
           <a
             *ngFor="let item of mobileNavItems"
             mat-list-item
+            class="mobile-menu-link"
             [routerLink]="item.path"
             (click)="snav.close()"
             >{{ item.mobileLabel || item.label }}</a

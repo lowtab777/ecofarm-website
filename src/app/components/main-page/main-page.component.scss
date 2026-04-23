@@ -117,8 +117,8 @@ ul {
     line-height: 1.05;
     width: 100%;
   }
-  .headline .main-text  { font-size: clamp(16px, 6.2vw, 28px); }
-  .headline .accent-text{ font-size: clamp(20px, 9.8vw, 36px); }
+  .headline .main-text  { font-size: clamp(21px, 8.6vw, 38px); }
+  .headline .accent-text{ font-size: clamp(30px, 13.2vw, 50px); }
 
   .headline span, .main-page-text, .single-text-block-green, .single-text-block-white {
     min-width: 0;
@@ -140,9 +140,10 @@ ul {
 
   .slogan { margin: 0 8px; font-size: 0; }
   .slogan h2 {
-    font-size: clamp(16px, 5.2vw, 20px);
+    font-size: clamp(14px, 4.4vw, 18px);
     line-height: 1.2;
     margin: 10px 0;
+    text-align: center;
   }
 
   .btn-primary { width: 100%; min-height: 44px; font-size: 15px; margin-top: 10px; }
@@ -187,11 +188,11 @@ ul {
     gap: 4px;
   }
   .headline .main-text {
-    font-size: clamp(18px, 6vw, 28px);
+    font-size: clamp(26px, 8.8vw, 44px);
     line-height: 1.1;
   }
   .headline .accent-text {
-    font-size: clamp(24px, 10vw, 40px);
+    font-size: clamp(34px, 14vw, 60px);
     line-height: 1.1;
   }
 
@@ -228,8 +229,8 @@ ul {
 
   .slogan {
     margin: 0 10px;
-    font-size: clamp(18px, 5vw, 24px);
-    text-align: left;
+    font-size: clamp(15px, 4.2vw, 19px);
+    text-align: center;
   }
 }
 

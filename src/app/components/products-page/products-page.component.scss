@@ -9,18 +9,30 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
 
-  .description .headline {
+  .description .product-hero {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .description .product-hero-title {
+    margin: 0 0 10px;
+    font-family: t.$font-family-base;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 0.4px;
+    color: t.$color-text-primary;
+    overflow-wrap: anywhere;
+  }
+
+  .description .product-hero-subtitle {
     margin: 0;
-    align-items: flex-start;
-  }
-
-  .description .headline .main-text {
-    font-size: clamp(34px, 3.5vw, 56px);
-  }
-
-  .description .headline .accent-text {
-    font-size: clamp(40px, 4.2vw, 72px);
+    font-size: clamp(16px, 1.6vw, 20px);
+    line-height: 1.45;
+    color: t.$color-text-secondary;
   }
 
   app-content-section .section > div {
@@ -60,14 +72,16 @@
 @media (max-width: 600px) {
   .product-page-wrap {
     padding: 12px;
+    overflow-x: hidden;
     .section { padding: 16px; }
 
-    .description .headline .main-text {
-      font-size: clamp(22px, 7vw, 34px);
+    .description .product-hero-title {
+      font-size: clamp(24px, 8vw, 30px);
+      letter-spacing: 0;
     }
 
-    .description .headline .accent-text {
-      font-size: clamp(28px, 9vw, 42px);
+    .description .product-hero-subtitle {
+      font-size: clamp(15px, 4vw, 17px);
     }
 
     app-content-section .section > div {

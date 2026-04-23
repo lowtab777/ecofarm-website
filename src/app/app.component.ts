@@ -23,7 +23,7 @@ import { NAV_ITEMS } from './navigation/nav-items';
 })
 export class AppComponent {
   @ViewChild('snav') sideNav!: MatSidenav;
-  readonly mobileNavItems = NAV_ITEMS;
+  public mobileNavItems = NAV_ITEMS;
 
   isMobileMenuOpened = false;
 
