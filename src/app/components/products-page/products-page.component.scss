@@ -2,13 +2,54 @@
 @use "../../../styles/mixins" as m;
 
 .product-page-wrap {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 16px;
+  padding: 24px 16px;
   color: t.$color-text-primary;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
+
+  .description .headline {
+    margin: 0;
+    align-items: flex-start;
+  }
+
+  .description .headline .main-text {
+    font-size: clamp(34px, 3.5vw, 56px);
+  }
+
+  .description .headline .accent-text {
+    font-size: clamp(40px, 4.2vw, 72px);
+  }
+
+  app-content-section .section > div {
+    max-width: 78ch;
+  }
+
+  app-content-section .section ul {
+    padding-left: 1.2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.7;
+  }
+
+  app-content-section .section p,
+  app-content-section .section li {
+    text-align: left;
+    line-height: 1.7;
+    font-size: clamp(16px, 1.2vw, 18px);
+  }
+
+  app-content-section .section li {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: t.$font-family-base;
+  }
+
+  .section-subtitle-strong {
+    font-weight: 800;
+  }
 
   .green-text { color: t.$color-accent; }
   .single-text-block-green {
@@ -20,9 +61,21 @@
   .product-page-wrap {
     padding: 12px;
     .section { padding: 16px; }
+
+    .description .headline .main-text {
+      font-size: clamp(22px, 7vw, 34px);
+    }
+
+    .description .headline .accent-text {
+      font-size: clamp(28px, 9vw, 42px);
+    }
+
+    app-content-section .section > div {
+      max-width: 100%;
+    }
   }
 
   .summary p{
-    font-size: clamp(12px, 2vw, 20px);
+    font-size: clamp(16px, 4.2vw, 20px);
   }
 }

@@ -1,7 +1,13 @@
 .news-detailed {
-  max-width: 860px;
+  max-width: 920px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 20px 16px;
+}
+
+.title {
+  margin: 0 0 12px;
+  font-size: clamp(28px, 3.2vw, 44px);
+  line-height: 1.2;
 }
 
 .img-main {
@@ -14,8 +20,8 @@
 }
 
 .content {
-  line-height: 1.6;
-  font-size: 16px;
+  line-height: 1.65;
+  font-size: clamp(16px, 1.1vw, 18px);
 
   p {
     margin-bottom: 1em;
