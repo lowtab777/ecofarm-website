@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { NewsItem } from '../../interfaces/news-item.model';
 import { NewsRepository } from '../../services/news-repository.service';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-news-detailed-page',
@@ -19,7 +19,8 @@ export class NewsDetailedPageComponent implements OnInit {
     private route: ActivatedRoute,
     private repo: NewsRepository,
     private router: Router,
-    private titleService: Title
+    private titleService: Title,
+    private metaService: Meta
   ) {}
 
   ngOnInit(): void {
@@ -32,7 +33,17 @@ export class NewsDetailedPageComponent implements OnInit {
     const found = this.repo.bySlug(slug);
     if (found) {
       this.news = found;
-      this.titleService.setTitle(`${this.news.title} - Екофарм`);
+      const seoTitle = `${this.news.title} | Екофарм`;
+      const seoDescription = this.news.description;
+      const pageUrl = `https://ecofarm.com.ua${this.router.url}`;
+
+      this.titleService.setTitle(seoTitle);
+      this.metaService.updateTag({ name: 'description', content: seoDescription });
+      this.metaService.updateTag({ property: 'og:title', content: seoTitle });
+      this.metaService.updateTag({ property: 'og:description', content: seoDescription });
+      this.metaService.updateTag({ property: 'og:url', content: pageUrl });
+      this.metaService.updateTag({ name: 'twitter:title', content: seoTitle });
+      this.metaService.updateTag({ name: 'twitter:description', content: seoDescription });
       return;
     }
     // in case nothing has been found
