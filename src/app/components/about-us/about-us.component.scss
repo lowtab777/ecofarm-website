@@ -1,6 +1,5 @@
-$accent: #93c756;
-$bg-green: #efffdd;
-$text: #1a1a1a;
+@use "../../../styles/tokens" as t;
+@use "../../../styles/mixins" as m;
 
 .main-page-wrap {
   display: flex;
@@ -32,7 +31,7 @@ $text: #1a1a1a;
 }
 
 p {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: t.$font-family-base;
   color: #646363;
   margin: 10px 0px 10px 0px;
   text-align: justify;
@@ -59,8 +58,7 @@ h2 {
 
 .single-text-block-white,
 .single-text-block-green {
-  border-radius: 12px;
-  padding: 20px 20px;
+  @include m.text-block(t.$space-5, t.$space-5);
 }
 
 h2 {

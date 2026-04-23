@@ -10,7 +10,7 @@ import { Title } from '@angular/platform-browser';
   standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './news-detailed-page.component.html',
-  styleUrls: ['./news-detailed-page.component.scss'],
+  styleUrl: './news-detailed-page.component.scss',
 })
 export class NewsDetailedPageComponent implements OnInit {
   news: NewsItem | null = null;

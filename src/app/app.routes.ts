@@ -7,14 +7,13 @@ import { TeamPageComponent } from './components/team-page/team-page.component';
 import { LicensesPageComponent } from './components/licenses-page/licenses-page.component';
 import { ProductsPageComponent } from './components/products-page/products-page.component';
 import { NewsDetailedPageComponent } from './components/news-detailed-page/news-detailed-page.component';
-import { VacanciesCardComponent } from './components/vacancies-card/vacancies-card.component';
 import { VacanciesPageComponent } from './components/vacancies-page/vacancies-page.component';
 
 // add lazy loading
 export const routes: Routes = [
   { path: '', redirectTo: 'main-page', pathMatch: 'full' },
   { path: 'news', component: NewsPageComponent },
-  { path: 'news/:slug', component: NewsDetailedPageComponent},
+  { path: 'news/:slug', component: NewsDetailedPageComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'main-page', component: MainPageComponent },

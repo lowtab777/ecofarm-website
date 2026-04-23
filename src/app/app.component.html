@@ -9,22 +9,12 @@
     >
       <div class="sidenav-backdrop" (click)="snav.close()">
         <mat-nav-list class="sidenav-menu" (click)="snav.close()">
-          <a mat-list-item routerLink="/" (click)="snav.close()">Головна</a>
-          <a mat-list-item routerLink="/about-us" (click)="snav.close()"
-            >Про нас</a
-          >
-          <a mat-list-item routerLink="/products" (click)="snav.close()"
-            >Аптечне виготовлення</a
-          >
-          <a mat-list-item routerLink="/team" (click)="snav.close()">Команда</a>
-          <a mat-list-item routerLink="/news" (click)="snav.close()">Новини</a>
-          <a mat-list-item routerLink="/licenses" (click)="snav.close()"
-            >Ліцензії</a
-          >
-          <a mat-list-item routerLink="/vacancies" (click)="snav.close()"
-            >Вакасії</a>
-          <a mat-list-item routerLink="/contacts" (click)="snav.close()"
-            >Контакти</a
+          <a
+            *ngFor="let item of mobileNavItems"
+            mat-list-item
+            [routerLink]="item.path"
+            (click)="snav.close()"
+            >{{ item.mobileLabel || item.label }}</a
           >
         </mat-nav-list>
       </div>

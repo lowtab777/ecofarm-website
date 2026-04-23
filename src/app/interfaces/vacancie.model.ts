@@ -1,4 +1,4 @@
-export interface Vacancie {
+export interface Vacancy {
   id: number; // +
   title: string; // position +
   region: string; // +

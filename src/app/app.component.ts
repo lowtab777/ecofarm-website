@@ -4,7 +4,8 @@ import { EcofarmHeaderComponent } from './components/ecofarm-header/ecofarm-head
 import { EcofarmFooterComponent } from './components/ecofarm-footer/ecofarm-footer.component';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { NgClass, CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common';
+import { NAV_ITEMS } from './navigation/nav-items';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,6 @@ import { NgClass, CommonModule } from '@angular/common';
     EcofarmFooterComponent,
     MatSidenavModule,
     MatListModule,
-    NgClass,
     RouterModule
   ],
   templateUrl: './app.component.html',
@@ -23,14 +23,14 @@ import { NgClass, CommonModule } from '@angular/common';
 })
 export class AppComponent {
   @ViewChild('snav') sideNav!: MatSidenav;
-  title = 'ecofarm-website';
+  readonly mobileNavItems = NAV_ITEMS;
 
   isMobileMenuOpened = false;
 
   openSidenav() {
-  this.isMobileMenuOpened = true;
-  this.sideNav.open();
-}
+    this.isMobileMenuOpened = true;
+    this.sideNav.open();
+  }
 
   closeSidenav() {
     this.isMobileMenuOpened = false;

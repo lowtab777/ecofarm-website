@@ -1,3 +1,6 @@
+@use "../../../styles/tokens" as t;
+@use "../../../styles/mixins" as m;
+
 .main-page-wrap {
   display: flex;
   justify-content: center;
@@ -54,8 +57,7 @@
 
 .single-text-block-white,
 .single-text-block-green {
-  border-radius: 12px;
-  padding: 10px 20px;
+  @include m.text-block(t.$space-3, t.$space-5);
 }
 
 p {

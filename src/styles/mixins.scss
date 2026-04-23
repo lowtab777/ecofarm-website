@@ -1,0 +1,32 @@
+@use "./tokens" as t;
+
+@mixin headline-typography {
+  .main-text {
+    font-family: t.$font-family-base;
+    font-size: 60px;
+    color: #232323;
+    font-weight: 100;
+    letter-spacing: 2px;
+    line-height: 1;
+  }
+
+  .accent-text {
+    font-family: t.$font-family-base;
+    font-size: 80px;
+    color: t.$color-accent;
+    font-weight: 100;
+    letter-spacing: 5px;
+    line-height: 1;
+  }
+}
+
+@mixin text-block($padding-y: t.$space-3, $padding-x: t.$space-5) {
+  border-radius: t.$radius-md;
+  padding: $padding-y $padding-x;
+}
+
+@mixin section-card($surface: t.$color-surface) {
+  border-radius: t.$radius-lg;
+  padding: t.$space-6;
+  background: $surface;
+}

@@ -3,22 +3,18 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import {
   FormBuilder,
-  FormControl,
   FormGroup,
   FormsModule,
   ReactiveFormsModule,
-  Validators,
 } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
 import { debounceTime, map, Observable, startWith } from 'rxjs';
-import { MatButton } from '@angular/material/button';
 import { POSITIONS } from '../../../services/positions-repository.service';
-import { MatIcon } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-ecofarm-vacancie-filter',
+  selector: 'app-ecofarm-vacancy-filter',
   imports: [
     MatAutocompleteModule,
     CommonModule,
@@ -26,13 +22,11 @@ import { MatIcon } from '@angular/material/icon';
     MatFormFieldModule,
     MatInput,
     ReactiveFormsModule,
-    MatButton,
-    MatIcon
   ],
   templateUrl: './ecofarm-vacancie-filter.component.html',
   styleUrl: './ecofarm-vacancie-filter.component.scss',
 })
-export class EcofarmVacancieFilterComponent implements OnInit {
+export class EcofarmVacancyFilterComponent implements OnInit {
   // todo separate model for eventEmiiters so it returns 1 object with specialized fields for filtering
   // to remove all outputs
   @Output() filterCityChange = new EventEmitter<string>();
